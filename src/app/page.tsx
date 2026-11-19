@@ -1,15 +1,22 @@
-import { Container } from "@/components/Container";
+import { Hero } from "@/components/home/Hero";
+import { StatsBar } from "@/components/home/StatsBar";
+import { Problem } from "@/components/home/Problem";
+import { Product } from "@/components/home/Product";
+import { Science } from "@/components/home/Science";
+import { TrustBar } from "@/components/home/TrustBar";
+import { PartnerCTA } from "@/components/home/PartnerCTA";
 
-// Placeholder until Step 2 (homepage) lands.
+// Section order is fixed by docs/BLUEPRINT.md section 3b (one action per section).
 export default function HomePage() {
   return (
-    <section className="bg-navy py-24 text-white">
-      <Container>
-        <h1 className="text-display font-bold">Stopping CAUTI before it starts</h1>
-        <p className="mt-6 max-w-2xl text-lg text-white/80">
-          A nurse-designed Foley system engineered to reduce catheter-associated infection risk at the source.
-        </p>
-      </Container>
-    </section>
+    <>
+      <Hero />
+      <StatsBar />
+      <Problem />
+      <Product />
+      <Science />
+      <TrustBar />
+      <PartnerCTA />
+    </>
   );
 }
