@@ -8,7 +8,7 @@ export function Product() {
   return (
     <section id="product" aria-labelledby="product-title" className="bg-mist py-20 md:py-28">
       <Container className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
-        <ProductVisual tone="light" />
+        <ProductVisual />
 
         <div>
           <p className="text-sm font-semibold uppercase tracking-wider text-accent-strong">The Hallstat system</p>

@@ -1,29 +1,22 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
+import systemPhoto from "../../../public/images/product/hallstat-system.jpg";
 
 /**
- * TODO: replace with the licensed full-system product render (BLUEPRINT 3: product renders, no stock gradients).
- * Until then this is a clearly labelled placeholder frame.
+ * Full Hallstat system photo (cropped from the current product page).
+ * TODO: swap in the high-resolution original / licensed render when available.
  */
-export function ProductVisual({ className, tone = "dark" }: { className?: string; tone?: "dark" | "light" }) {
+export function ProductVisual({ className, priority = false }: { className?: string; priority?: boolean }) {
   return (
-    <figure
-      className={cn(
-        "flex aspect-[4/3] w-full flex-col items-center justify-center rounded-xl border-2 border-dashed p-6 text-center",
-        tone === "dark" ? "border-white/25 text-white/70" : "border-line bg-mist text-muted",
-        className,
-      )}
-    >
-      <svg viewBox="0 0 240 80" className="w-3/4 max-w-xs" aria-hidden>
-        <path
-          d="M10 40 Q 60 40 90 40 L 150 40 Q 175 40 185 30 L 230 30"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="6"
-          strokeLinecap="round"
-        />
-        <circle cx="150" cy="40" r="11" fill="none" stroke="currentColor" strokeWidth="4" />
-      </svg>
-      <figcaption className="mt-4 text-sm">TODO: Hallstat full-system product render</figcaption>
+    <figure className={cn("rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5", className)}>
+      <Image
+        src={systemPhoto}
+        alt="The Hallstat Foley catheter system: silicone catheter, drainage tubing, urine meter and collection bag"
+        className="mx-auto h-auto max-h-[28rem] w-auto"
+        sizes="(min-width: 768px) 40vw, 90vw"
+        placeholder="blur"
+        priority={priority}
+      />
     </figure>
   );
 }

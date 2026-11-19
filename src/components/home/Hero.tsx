@@ -18,7 +18,7 @@ export function Hero() {
             <a href="#product">See the Technology</a>
           </Button>
         </div>
-        <ProductVisual />
+        <ProductVisual priority />
       </Container>
     </section>
   );
