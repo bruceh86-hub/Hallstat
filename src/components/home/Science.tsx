@@ -1,17 +1,25 @@
+import Link from "next/link";
 import { Container } from "@/components/Container";
 import { FeatureCard } from "@/components/FeatureCard";
-import { studies } from "@/content/home";
+import { featuredStudies } from "@/content/studies";
 
 export function Science() {
   return (
     <section aria-labelledby="science-title" className="py-20 md:py-28">
       <Container>
-        <p className="text-sm font-semibold uppercase tracking-wider text-accent-strong">Science foundation</p>
-        <h2 id="science-title" className="mt-3 max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
-          Built on published research into how CAUTI develops
-        </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {studies.slice(0, 4).map((s) => (
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-accent-strong">Science foundation</p>
+            <h2 id="science-title" className="mt-3 max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
+              Built on published research into how CAUTI develops
+            </h2>
+          </div>
+          <Link href="/studies" className="font-semibold text-accent-strong hover:underline">
+            All studies →
+          </Link>
+        </div>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {featuredStudies.map((s) => (
             <FeatureCard key={s.slug} study={s} />
           ))}
         </div>

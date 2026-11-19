@@ -42,53 +42,6 @@ export const systemComponents = [
   },
 ] as const;
 
-export type StudyCard = {
-  slug: string;
-  tag: string;
-  /** Peer-reviewed only. Hallstat bench work must use kind "internal". */
-  kind: "peer-reviewed" | "internal";
-  title: string;
-  journal: string;
-  year: string;
-  takeaway: string;
-  todo?: boolean;
-};
-
-// TODO(owner): choose the 3–4 peer-reviewed studies for this grid (BLUEPRINT 3b open question).
-// Placeholders are clearly marked and must be replaced before launch. Do not invent citations.
-export const studies: StudyCard[] = [
-  {
-    slug: "biofilm",
-    tag: "Biofilm",
-    kind: "peer-reviewed",
-    title: "TODO: study on biofilm formation on indwelling catheters",
-    journal: "TODO: journal",
-    year: "TODO",
-    takeaway: "TODO: one-sentence takeaway from the selected study.",
-    todo: true,
-  },
-  {
-    slug: "bacterial-migration",
-    tag: "Bacterial migration",
-    kind: "peer-reviewed",
-    title: "TODO: study on extraluminal / intraluminal bacterial migration",
-    journal: "TODO: journal",
-    year: "TODO",
-    takeaway: "TODO: one-sentence takeaway from the selected study.",
-    todo: true,
-  },
-  {
-    slug: "backflow",
-    tag: "Drainage backflow",
-    kind: "peer-reviewed",
-    title: "TODO: study on reflux from drainage systems",
-    journal: "TODO: journal",
-    year: "TODO",
-    takeaway: "TODO: one-sentence takeaway from the selected study.",
-    todo: true,
-  },
-];
-
 export type TrustBadge = { label: string; detail: string; verified: boolean };
 
 // Only show a badge as verified once written permission / proof is on file (BLUEPRINT 3b.6).
