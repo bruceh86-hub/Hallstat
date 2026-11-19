@@ -1,25 +1,25 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import logoLight from "../../public/brand/hallstat-logo-light.png";
+import logoWhite from "../../public/brand/hallstat-logo-white.png";
 import logoNavy from "../../public/brand/hallstat-logo-navy.png";
 
 /**
- * Official Hallstat logo (supplied by the owner; white background removed, artwork unchanged).
- * `light` = gray version for navy backgrounds, `navy` = primary version for light backgrounds.
+ * Official Hallstat logo, from the owner's 1472x2000 navy master (white background removed, artwork unchanged).
+ * `white` = for navy backgrounds (same artwork, white fill), `navy` = primary version for light backgrounds.
  * Size it by height via className (e.g. "h-16"); width follows the logo's proportions.
  */
 export function Logo({
-  variant = "light",
+  variant = "white",
   className,
   priority,
 }: {
-  variant?: "light" | "navy";
+  variant?: "white" | "navy";
   className?: string;
   priority?: boolean;
 }) {
   return (
     <Image
-      src={variant === "light" ? logoLight : logoNavy}
+      src={variant === "white" ? logoWhite : logoNavy}
       alt="Hallstat"
       priority={priority}
       sizes="120px"
