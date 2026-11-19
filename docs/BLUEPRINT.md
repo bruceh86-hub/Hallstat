@@ -168,7 +168,7 @@ Goal: make hallstat.com a strong, credible result for searches of "Bruce Huici,"
 ### 11b. Structured data (JSON-LD)
 - On `/about/bruce-huici`: `ProfilePage` with `mainEntity` = `Person`:
   - name "Bruce Huici", jobTitle "Founder & CEO", worksFor Organization "Hallstat Industries Inc.", image, url, description, knowsAbout ["Foley catheters", "CAUTI prevention", "medical device design", "nursing"]
-  - `sameAs`: ["https://www.brucehuici.com", "TODO LinkedIn URL", "TODO Medium URL", other verified profiles]
+  - `sameAs`: ["https://www.brucehuici.com", "https://www.linkedin.com/in/bruce-huici-207b1939", "TODO Medium URL", other verified profiles]
 - On every page: `Organization` schema with `founder` → the Person `@id` (`https://www.hallstat.com/about/bruce-huici#person`).
 - On news posts: `NewsArticle` with `author` = the Person `@id`.
 

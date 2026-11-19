@@ -1,10 +1,74 @@
 [
-  {"name": "Bruce Huici", "credentials": "TODO", "title": "President/CEO", "group": "Leadership", "bio": "TODO", "photo": "", "linkedin": ""},
-  {"name": "Carlos Peña", "credentials": "TODO", "title": "Director/CFO", "group": "Leadership", "bio": "TODO", "photo": "", "linkedin": ""},
-  {"name": "Bryan Martin", "credentials": "TODO", "title": "Director/COO", "group": "Leadership", "bio": "TODO", "photo": "", "linkedin": ""},
-  {"name": "Kenneth Iroezi", "credentials": "TODO", "title": "International Business Development", "group": "Leadership", "bio": "TODO", "photo": "", "linkedin": ""},
-  {"name": "Dr. Mohamad El Kassim", "credentials": "TODO", "title": "Medical Advisor", "group": "Medical Advisory Board", "bio": "TODO", "photo": "", "linkedin": ""},
-  {"name": "Dr. Justin Speigel", "credentials": "TODO", "title": "Medical Advisor", "group": "Medical Advisory Board", "bio": "TODO", "photo": "", "linkedin": ""},
-  {"name": "Dr. Mileivys Huici", "credentials": "TODO", "title": "Medical Advisor", "group": "Medical Advisory Board", "bio": "TODO", "photo": "", "linkedin": ""},
-  {"name": "Dr. Nora Homsi", "credentials": "TODO", "title": "Medical Advisor", "group": "Medical Advisory Board", "bio": "TODO", "photo": "", "linkedin": ""}
+  {
+    "name": "Bruce Huici",
+    "credentials": "TODO",
+    "title": "President/CEO",
+    "group": "Leadership",
+    "bio": "TODO",
+    "photo": "",
+    "linkedin": "https://www.linkedin.com/in/bruce-huici-207b1939"
+  },
+  {
+    "name": "Carlos Peña",
+    "credentials": "TODO",
+    "title": "Director/CFO",
+    "group": "Leadership",
+    "bio": "TODO",
+    "photo": "",
+    "linkedin": ""
+  },
+  {
+    "name": "Bryan Martin",
+    "credentials": "TODO",
+    "title": "Director/COO",
+    "group": "Leadership",
+    "bio": "TODO",
+    "photo": "",
+    "linkedin": ""
+  },
+  {
+    "name": "Kenneth Iroezi",
+    "credentials": "TODO",
+    "title": "International Business Development",
+    "group": "Leadership",
+    "bio": "TODO",
+    "photo": "",
+    "linkedin": ""
+  },
+  {
+    "name": "Dr. Mohamad El Kassim",
+    "credentials": "TODO",
+    "title": "Medical Advisor",
+    "group": "Medical Advisory Board",
+    "bio": "TODO",
+    "photo": "",
+    "linkedin": ""
+  },
+  {
+    "name": "Dr. Justin Speigel",
+    "credentials": "TODO",
+    "title": "Medical Advisor",
+    "group": "Medical Advisory Board",
+    "bio": "TODO",
+    "photo": "",
+    "linkedin": ""
+  },
+  {
+    "name": "Dr. Mileivys Huici",
+    "credentials": "TODO",
+    "title": "Medical Advisor",
+    "group": "Medical Advisory Board",
+    "bio": "TODO",
+    "photo": "",
+    "linkedin": ""
+  },
+  {
+    "name": "Dr. Nora Homsi",
+    "credentials": "TODO",
+    "title": "Medical Advisor",
+    "group": "Medical Advisory Board",
+    "bio": "TODO",
+    "photo": "",
+    "linkedin": ""
+  }
 ]
