@@ -1,7 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
   "redirects": [
-    { "source": "/hallstat-foley-system", "destination": "/technology", "permanent": true },
-    { "source": "/our-team", "destination": "/about#team", "permanent": true }
+    {
+      "source": "/hallstat-foley-system",
+      "destination": "/technology",
+      "permanent": true
+    },
+    {
+      "source": "/our-team",
+      "destination": "/about#team",
+      "permanent": true
+    }
   ]
 }
