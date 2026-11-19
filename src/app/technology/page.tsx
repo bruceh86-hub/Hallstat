@@ -32,7 +32,7 @@ export default function TechnologyPage() {
       <section aria-labelledby="tech-title" className="bg-navy text-white">
         <Container className="grid items-center gap-12 py-16 md:grid-cols-[1.1fr_1fr] md:py-24">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-accent">Technology</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-navy-200">Technology</p>
             <h1 id="tech-title" className="mt-4 text-display font-bold">
               One system, four lines of defense
             </h1>
@@ -41,7 +41,7 @@ export default function TechnologyPage() {
               different route that bacteria use to reach the bladder.
             </p>
           </div>
-          <figure className="rounded-2xl bg-white p-6">
+          <figure className="rounded-md bg-white p-6">
             <Image
               src={systemImg}
               alt="The complete Hallstat Foley catheter system"
@@ -73,7 +73,7 @@ export default function TechnologyPage() {
         index={1}
         figure={<Figure src={catheterImg} alt="The CallisterCatheter, a clear silicone Foley catheter" />}
       >
-        <div className="mt-12 rounded-2xl border border-line bg-white p-6 md:p-8">
+        <div className="mt-12 rounded-md border border-line bg-white p-6 md:p-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-navy px-3 py-1 text-xs font-semibold text-white">Internal testing</span>
             <span className="text-sm text-muted">Bench observation, not a clinical study</span>
@@ -130,10 +130,10 @@ export default function TechnologyPage() {
         <h3 className="mt-14 text-2xl font-bold tracking-tight">Design challenges we set out to solve</h3>
         <ul className="mt-6 grid gap-6 md:grid-cols-3">
           {valveChallenges.map((c) => (
-            <li key={c.problem} className="rounded-xl border border-line bg-white p-6">
+            <li key={c.problem} className="rounded-md border border-line bg-white p-6">
               <p className="text-xs font-semibold uppercase tracking-wider text-muted">Problem</p>
               <p className="mt-1 text-navy">{c.problem}</p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-accent-strong">Our approach</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-navy-600">Our approach</p>
               <p className="mt-1 text-muted">{c.approach}</p>
             </li>
           ))}
@@ -147,7 +147,7 @@ export default function TechnologyPage() {
           <h2 id="status-title" className="text-3xl font-bold tracking-tight md:text-4xl">
             Development status
           </h2>
-          <div className="mt-8 overflow-x-auto rounded-xl border border-line">
+          <div className="mt-8 overflow-x-auto rounded-md border border-line">
             <table className="w-full min-w-[32rem] text-left">
               <thead className="bg-mist text-sm text-navy">
                 <tr>
@@ -178,7 +178,7 @@ export default function TechnologyPage() {
             </table>
           </div>
 
-          <p className="mt-8 rounded-xl border-l-4 border-accent bg-mist p-5 font-semibold text-navy">
+          <p className="mt-8 rounded-md border-l-4 border-accent bg-mist p-5 font-semibold text-navy">
             {site.disclaimer}
           </p>
         </Container>

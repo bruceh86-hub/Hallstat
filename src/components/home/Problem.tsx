@@ -7,7 +7,7 @@ export function Problem() {
     <section id="problem" aria-labelledby="problem-title" className="py-20 md:py-28">
       <Container className="grid gap-12 md:grid-cols-[1.6fr_1fr] md:gap-16">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent-strong">The problem</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-navy-600">The problem</p>
           <h2 id="problem-title" className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
             Infection starts on the catheter itself
           </h2>
@@ -28,14 +28,14 @@ export function Problem() {
           </div>
         </div>
 
-        <aside aria-label="Founder quote" className="self-start rounded-xl bg-mist p-8">
+        <aside aria-label="Founder quote" className="self-start rounded-md bg-mist p-8">
           <div className="h-1 w-12 rounded-full bg-accent" aria-hidden />
           <blockquote className="mt-6">
             <p className="text-2xl font-semibold leading-snug text-navy">“Designed by nurses. Built for nurses.”</p>
           </blockquote>
           <p className="mt-4 text-sm text-muted">
             —{" "}
-            <Link href={site.founder.path} className="font-semibold text-accent-strong hover:underline">
+            <Link href={site.founder.path} className="font-semibold text-navy-600 hover:underline">
               {site.founder.name}
             </Link>
             , {site.founder.title}

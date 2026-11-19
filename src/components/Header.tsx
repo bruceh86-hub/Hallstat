@@ -18,13 +18,13 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy text-white">
-      <Container className="flex h-16 items-center justify-between">
-        <Link href="/" aria-label="Hallstat Industries home" className="rounded-sm">
-          <Logo />
+      <Container className="flex h-20 items-center justify-between md:h-28">
+        <Link href="/" aria-label="Hallstat Industries home" className="-my-1 shrink-0 rounded-sm py-1">
+          <Logo priority className="h-14 md:h-[5.25rem]" />
         </Link>
 
         <nav aria-label="Main" className="hidden md:block">
-          <ul className="flex items-center gap-7 text-[0.95rem]">
+          <ul className="flex items-center gap-8 text-[0.95rem] tracking-wide">
             {site.nav.map((item) => {
               const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (
@@ -34,7 +34,7 @@ export function Header() {
                     aria-current={active ? "page" : undefined}
                     className={cn(
                       "rounded-sm py-1 text-white/80 hover:text-white",
-                      active && "text-white underline decoration-accent decoration-2 underline-offset-8",
+                      active && "text-white underline decoration-white/70 decoration-1 underline-offset-8",
                     )}
                   >
                     {item.label}

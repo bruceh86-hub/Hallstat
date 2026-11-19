@@ -51,7 +51,7 @@ export default function FounderPage() {
             className="w-40 bg-white/10 text-white ring-white/20 md:w-56"
           />
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+            <p className="text-sm font-semibold uppercase tracking-wider text-navy-200">
               <Link href="/about" className="hover:underline">
                 About
               </Link>{" "}
@@ -82,19 +82,19 @@ export default function FounderPage() {
           <p>
             Bruce started Hallstat to design a Foley system around how bacteria actually reach the bladder. He is the
             inventor behind its four components: the{" "}
-            <Link href="/technology#microtip" className="font-semibold text-accent-strong hover:underline">
+            <Link href="/technology#microtip" className="font-semibold text-navy-600 hover:underline">
               MicroTip™
             </Link>
             ,{" "}
-            <Link href="/technology#callistercatheter" className="font-semibold text-accent-strong hover:underline">
+            <Link href="/technology#callistercatheter" className="font-semibold text-navy-600 hover:underline">
               CallisterCatheter™
             </Link>
             ,{" "}
-            <Link href="/technology#bermeovalve" className="font-semibold text-accent-strong hover:underline">
+            <Link href="/technology#bermeovalve" className="font-semibold text-navy-600 hover:underline">
               BermeoValve™
             </Link>{" "}
             and{" "}
-            <Link href="/technology#bactistat" className="font-semibold text-accent-strong hover:underline">
+            <Link href="/technology#bactistat" className="font-semibold text-navy-600 hover:underline">
               BactiStat™ Tubing
             </Link>
             . The system is investigational and not available for sale.
@@ -122,7 +122,7 @@ export default function FounderPage() {
                     href={l.href}
                     rel="me noopener noreferrer"
                     target="_blank"
-                    className="font-semibold text-accent-strong hover:underline"
+                    className="font-semibold text-navy-600 hover:underline"
                   >
                     {l.label}
                     <span className="sr-only"> (opens in a new tab)</span>
@@ -160,7 +160,7 @@ export default function FounderPage() {
             {/* Populated from /news in Step 6, plus outside coverage. */}
             <p className="mt-3 text-sm text-muted">
               Press releases and coverage will appear here.{" "}
-              <Link href="/news" className="font-semibold text-accent-strong hover:underline">
+              <Link href="/news" className="font-semibold text-navy-600 hover:underline">
                 Visit the newsroom
               </Link>
             </p>

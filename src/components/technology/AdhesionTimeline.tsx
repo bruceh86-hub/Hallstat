@@ -6,7 +6,7 @@ export function AdhesionTimeline() {
   return (
     <section aria-labelledby="timeline-title" className="py-16 md:py-24">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <p className="text-sm font-semibold uppercase tracking-wider text-accent-strong">Why the surface matters</p>
+        <p className="text-sm font-semibold uppercase tracking-wider text-navy-600">Why the surface matters</p>
         <h2 id="timeline-title" className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
           How bacteria colonize a standard catheter
         </h2>
@@ -20,7 +20,7 @@ export function AdhesionTimeline() {
         />
         <ol className="mt-6 grid gap-4 md:grid-cols-5">
           {adhesionTimeline.map((step, i) => (
-            <li key={i} className="rounded-xl border border-line p-4 md:border-0 md:p-0 md:text-center">
+            <li key={i} className="rounded-md border border-line p-4 md:border-0 md:p-0 md:text-center">
               <p className="font-semibold text-navy">{step.when}</p>
               <p className="mt-1 text-sm text-muted">{step.what}</p>
             </li>

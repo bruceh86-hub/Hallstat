@@ -15,7 +15,7 @@ export function Figure({
   priority?: boolean;
 }) {
   return (
-    <figure className={cn("rounded-2xl bg-white p-5 ring-1 ring-black/5", className)}>
+    <figure className={cn("rounded-md bg-white p-5 ring-1 ring-black/5", className)}>
       <Image
         src={src}
         alt={alt}

@@ -17,7 +17,7 @@ export default function StudiesPage() {
     <>
       <section aria-labelledby="studies-title" className="bg-navy text-white">
         <Container className="py-16 md:py-24">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">Studies</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-navy-200">Studies</p>
           <h1 id="studies-title" className="mt-4 max-w-3xl text-display font-bold">
             The research behind the problem
           </h1>
@@ -28,7 +28,7 @@ export default function StudiesPage() {
         </Container>
       </section>
 
-      <nav aria-label="Study topics" className="sticky top-16 z-40 border-b border-line bg-white/95 backdrop-blur">
+      <nav aria-label="Study topics" className="sticky top-20 z-40 md:top-28 border-b border-line bg-white/95 backdrop-blur">
         <Container>
           <ul className="-mx-2 flex gap-1 overflow-x-auto py-2 text-sm font-semibold">
             {topics.map((t) => (
@@ -66,9 +66,9 @@ export default function StudiesPage() {
                   <li
                     key={s.slug}
                     id={s.slug}
-                    className="scroll-mt-36 rounded-xl border border-line bg-white p-6 target:ring-2 target:ring-accent md:p-8"
+                    className="scroll-mt-36 rounded-md border border-line bg-white p-6 target:ring-2 target:ring-navy-600 md:p-8"
                   >
-                    <p className="text-xs font-semibold uppercase tracking-wider text-accent-strong">{s.design}</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-600">{s.design}</p>
                     <h3 className="mt-2 text-xl font-semibold leading-snug text-navy">{s.title}</h3>
                     <p className="mt-2 text-sm text-muted">
                       {s.authors}. <cite className="italic">{s.journal}</cite>, {s.year}.
@@ -78,7 +78,7 @@ export default function StudiesPage() {
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent-strong hover:underline"
+                      className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy-600 hover:underline"
                     >
                       Read the source
                       <ExternalLink aria-hidden className="size-4" />
@@ -93,7 +93,7 @@ export default function StudiesPage() {
 
       <section id="internal-testing" aria-labelledby="internal-title" className="scroll-mt-32 py-16 md:py-20">
         <Container>
-          <div className="rounded-2xl border-2 border-dashed border-line p-6 md:p-10">
+          <div className="rounded-md border-2 border-dashed border-line p-6 md:p-10">
             <span className="rounded-full bg-navy px-3 py-1 text-xs font-semibold text-white">Internal testing</span>
             <h2 id="internal-title" className="mt-4 text-3xl font-bold tracking-tight">
               Hallstat bench work

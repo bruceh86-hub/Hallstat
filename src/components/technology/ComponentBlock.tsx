@@ -23,7 +23,7 @@ export function ComponentBlock({
       <Container>
         <div className={cn("grid items-start gap-10 md:grid-cols-2 md:gap-16", !figure && "md:grid-cols-1")}>
           <div className={cn(figure && flip && "md:order-2", !figure && "max-w-3xl")}>
-            <p className="text-sm font-semibold uppercase tracking-wider text-accent-strong">
+            <p className="text-sm font-semibold uppercase tracking-wider text-navy-600">
               Component {index + 1} of 4
             </p>
             <h2 id={`${section.slug}-title`} className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">

@@ -6,7 +6,7 @@ export function TeamCard({ member }: { member: TeamMember }) {
   const credentials = filled(member.credentials);
   const bio = filled(member.bio);
   return (
-    <article className="flex w-full flex-col items-center rounded-xl border border-line bg-white p-6 text-center">
+    <article className="flex w-full flex-col items-center rounded-md border border-line bg-white p-6 text-center">
       <Avatar name={member.name} photo={member.photo} className="w-28" />
       <h3 className="mt-4 text-lg font-semibold text-navy">
         {member.profile ? (
@@ -22,7 +22,7 @@ export function TeamCard({ member }: { member: TeamMember }) {
       {bio && <p className="mt-4 text-sm text-muted">{bio}</p>}
       <div className="mt-auto flex gap-4 pt-4 text-sm font-semibold">
         {member.profile && (
-          <Link href={member.profile} className="text-accent-strong hover:underline">
+          <Link href={member.profile} className="text-navy-600 hover:underline">
             Full profile
           </Link>
         )}
@@ -31,7 +31,7 @@ export function TeamCard({ member }: { member: TeamMember }) {
             href={member.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent-strong hover:underline"
+            className="text-navy-600 hover:underline"
             aria-label={`${member.name} on LinkedIn (opens in a new tab)`}
           >
             LinkedIn

@@ -1,10 +1,29 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
+import logoLight from "../../public/brand/hallstat-logo-light.png";
+import logoNavy from "../../public/brand/hallstat-logo-navy.png";
 
-/** Text wordmark. TODO: replace with the official Hallstat logo file when supplied. */
-export function Logo({ className }: { className?: string }) {
+/**
+ * Official Hallstat logo (supplied by the owner; white background removed, artwork unchanged).
+ * `light` = gray version for navy backgrounds, `navy` = primary version for light backgrounds.
+ * Size it by height via className (e.g. "h-16"); width follows the logo's proportions.
+ */
+export function Logo({
+  variant = "light",
+  className,
+  priority,
+}: {
+  variant?: "light" | "navy";
+  className?: string;
+  priority?: boolean;
+}) {
   return (
-    <span className={cn("text-xl font-bold tracking-tight", className)}>
-      Hall<span className="text-accent">stat</span>
-    </span>
+    <Image
+      src={variant === "light" ? logoLight : logoNavy}
+      alt="Hallstat"
+      priority={priority}
+      sizes="120px"
+      className={cn("h-16 w-auto", className)}
+    />
   );
 }

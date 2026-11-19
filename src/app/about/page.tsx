@@ -18,13 +18,13 @@ export default function AboutPage() {
     <>
       <section aria-labelledby="about-title" className="bg-navy text-white">
         <Container className="py-16 md:py-24">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">About Hallstat</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-navy-200">About Hallstat</p>
           <h1 id="about-title" className="mt-4 max-w-3xl text-display font-bold">
             Nurse-founded. Built at the bedside.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">
             Hallstat Industries was founded by{" "}
-            <Link href={site.founder.path} className="text-white underline underline-offset-4 hover:text-accent">
+            <Link href={site.founder.path} className="text-white underline underline-offset-4 hover:text-navy-200">
               {site.founder.name}
             </Link>
             , a nurse. We are developing the Hallstat system, an investigational Foley catheter system
@@ -49,7 +49,7 @@ export default function AboutPage() {
             <p className="mt-4 text-muted">
               We partner with medical device manufacturers and distributors to license and bring the Hallstat system to
               market. Our design decisions are grounded in{" "}
-              <Link href="/studies" className="font-semibold text-accent-strong hover:underline">
+              <Link href="/studies" className="font-semibold text-navy-600 hover:underline">
                 published research
               </Link>{" "}
               and clearly separated from our own early bench work.
@@ -66,7 +66,7 @@ export default function AboutPage() {
           </h2>
           {groups.map((g) => (
             <div key={g} className="mt-10">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-accent-strong">{g}</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-navy-600">{g}</h3>
               <ul className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {members
                   .filter((m) => m.group === g)

@@ -7,7 +7,7 @@ export function Hero() {
     <section aria-labelledby="hero-title" className="bg-navy text-white">
       <Container className="grid items-center gap-12 py-20 md:grid-cols-[1.1fr_1fr] md:py-28">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">Investigational Foley system</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-navy-200">Investigational Foley system</p>
           <h1 id="hero-title" className="mt-4 text-display font-bold">
             Stopping CAUTI before it starts
           </h1>

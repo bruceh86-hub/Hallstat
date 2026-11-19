@@ -8,7 +8,7 @@ import systemPhoto from "../../../public/images/product/hallstat-system.jpg";
  */
 export function ProductVisual({ className, priority = false }: { className?: string; priority?: boolean }) {
   return (
-    <figure className={cn("rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5", className)}>
+    <figure className={cn("rounded-md bg-white p-6 shadow-sm ring-1 ring-black/5", className)}>
       <Image
         src={systemPhoto}
         alt="The Hallstat Foley catheter system: silicone catheter, drainage tubing, urine meter and collection bag"

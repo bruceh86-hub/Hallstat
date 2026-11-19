@@ -4,7 +4,7 @@
  */
 export function ValveFlowDiagram() {
   return (
-    <figure className="rounded-2xl bg-white p-5 ring-1 ring-black/5">
+    <figure className="rounded-md bg-white p-5 ring-1 ring-black/5">
       <svg viewBox="0 0 520 170" role="img" aria-labelledby="valve-diagram-title valve-diagram-desc" className="w-full">
         <title id="valve-diagram-title">BermeoValve flow diagram</title>
         <desc id="valve-diagram-desc">

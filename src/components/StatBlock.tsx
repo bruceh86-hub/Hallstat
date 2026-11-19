@@ -11,7 +11,7 @@ export function StatBlock({ stat, index }: { stat: Stat; index: number }) {
             href={stat.source.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent hover:underline"
+            className="text-navy-200 hover:underline"
             aria-label={`Source ${index + 1}: ${stat.source.name} (opens in a new tab)`}
           >
             [{index + 1}]

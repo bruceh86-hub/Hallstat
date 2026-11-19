@@ -7,16 +7,16 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy text-white/80">
+    <footer className="bg-navy-800 text-white/80">
       <Container className="grid gap-10 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <Logo className="text-white" />
+          <Logo className="h-14" />
           <p className="mt-3 max-w-sm text-sm">
             A nurse-designed Foley catheter system in development, intended to reduce catheter-associated infection risk.
           </p>
           <p className="mt-4 text-sm">
             {site.legalName} — founded by{" "}
-            <Link href={site.founder.path} className="text-white underline underline-offset-4 hover:text-accent">
+            <Link href={site.founder.path} className="text-white underline underline-offset-4 hover:text-navy-200">
               {site.founder.name}
             </Link>
           </p>

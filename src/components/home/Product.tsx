@@ -11,7 +11,7 @@ export function Product() {
         <ProductVisual />
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent-strong">The Hallstat system</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-navy-600">The Hallstat system</p>
           <h2 id="product-title" className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
             Four components, one closed system
           </h2>
