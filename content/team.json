@@ -6,7 +6,17 @@
     "group": "Leadership",
     "bio": "TODO",
     "photo": "",
-    "linkedin": "https://www.linkedin.com/in/bruce-huici-207b1939"
+    "linkedin": "https://www.linkedin.com/in/bruce-huici-207b1939",
+    "profile": "/about/bruce-huici"
+  },
+  {
+    "name": "Bryan Martin",
+    "credentials": "TODO",
+    "title": "Director/COO",
+    "group": "Leadership",
+    "bio": "TODO",
+    "photo": "",
+    "linkedin": ""
   },
   {
     "name": "Carlos Peña",
@@ -18,9 +28,9 @@
     "linkedin": ""
   },
   {
-    "name": "Bryan Martin",
+    "name": "Dr. Mileivys Huici",
     "credentials": "TODO",
-    "title": "Director/COO",
+    "title": "Chief Clinical Officer/Executive Vice President",
     "group": "Leadership",
     "bio": "TODO",
     "photo": "",
@@ -46,15 +56,6 @@
   },
   {
     "name": "Dr. Justin Speigel",
-    "credentials": "TODO",
-    "title": "Medical Advisor",
-    "group": "Medical Advisory Board",
-    "bio": "TODO",
-    "photo": "",
-    "linkedin": ""
-  },
-  {
-    "name": "Dr. Mileivys Huici",
     "credentials": "TODO",
     "title": "Medical Advisor",
     "group": "Medical Advisory Board",
