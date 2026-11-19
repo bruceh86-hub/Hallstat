@@ -11,7 +11,8 @@ Next.js 15 (App Router) · TypeScript · Tailwind CSS · shadcn/ui · Framer Mot
 3. Use investigational, evidence-calibrated language ("designed to," "intended to reduce"). Never claim proven clinical outcomes.
 4. Every statistic shows a visible citation link to its source (sources listed in BLUEPRINT section 3b).
 5. Do not invent studies, certifications, patent numbers, team bios, or logos. Use clearly marked placeholders (`TODO:`) instead.
-6. Footer includes: "Caution: Investigational device. Not available for sale." and the current year.
+6. Founder name SEO is a core goal — implement BLUEPRINT section 11 exactly (founder page, Person/ProfilePage JSON-LD with sameAs, Organization.founder, newsroom with author bylines). No keyword stuffing, hidden text, or doorway pages.
+7. Footer includes: "Caution: Investigational device. Not available for sale." and the current year.
 
 ## Homepage (one action per section)
 Hero → Stats bar → Problem (with founder pull-quote sidebar) → Product (image left, copy right) → Science grid (3–4 cards → /studies) → Trust bar → Partner With Us form (Name, Organization, Role dropdown, Email, Message).
@@ -21,9 +22,9 @@ Hero → Stats bar → Problem (with founder pull-quote sidebar) → Product (im
 2. Homepage
 3. /technology (product deep-dive)
 4. /studies
-5. /about (includes team from `content/team.json`)
-6. /contact + `/api/contact` route (Zod validation, Resend email; env: RESEND_API_KEY, CONTACT_TO_EMAIL)
-7. SEO (metadata, sitemap, robots, JSON-LD), legal pages, 301 redirects in `vercel.json`
+5. /about (team from `content/team.json`) + /about/bruce-huici founder page
+6. /news newsroom (MDX, RSS, NewsArticle schema) + /contact + `/api/contact` route (Zod validation, Resend email; env: RESEND_API_KEY, CONTACT_TO_EMAIL)
+7. SEO (metadata, sitemap, robots, all JSON-LD from BLUEPRINT 11, Search Console/Bing verification), legal pages, 301 redirects in `vercel.json`
 
 ## Quality bar
 WCAG 2.1 AA, mobile-first, Lighthouse ≥ 95, no lorem ipsum.

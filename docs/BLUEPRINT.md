@@ -152,3 +152,43 @@ Data file for Claude: `/content/team.json` with fields name, credentials, title,
 - Confirm patent/trademark wording (™ vs ®) with counsel
 - Redirect old URLs (301) in vercel.json: /hallstat-foley-system → /technology, /our-team → /about#team
 - Test forms end-to-end in Vercel preview before switching DNS
+
+## 11. Founder name search & reputation (SEO for "Bruce Huici")
+Goal: make hallstat.com a strong, credible result for searches of "Bruce Huici," reinforcing brucehuici.com, LinkedIn, and Medium. Use only legitimate, accurate content — no keyword stuffing, hidden text, doorway pages, or link schemes (these can get the site penalized).
+
+### 11a. Dedicated founder page — `/about/bruce-huici`
+- `<title>`: "Bruce Huici — Founder & CEO, Hallstat Industries"
+- H1: "Bruce Huici"; subhead: "Founder & CEO, Hallstat Industries · Nurse · Medical Device Inventor"
+- 400–700 words: nursing background, why he invented the Hallstat system, inventions (MicroTip™, CallisterCatheter™, BermeoValve™, BactiStat™ Tubing), patents (TODO numbers), MBE certification, other ventures, speaking/press.
+- Professional headshot, filename `bruce-huici-founder-hallstat.jpg`, alt "Bruce Huici, founder and CEO of Hallstat Industries".
+- "In the News" list linking to press releases (`/news`) and outside coverage.
+- Links out to brucehuici.com, LinkedIn, Medium (rel="me").
+- Self-referencing canonical URL.
+
+### 11b. Structured data (JSON-LD)
+- On `/about/bruce-huici`: `ProfilePage` with `mainEntity` = `Person`:
+  - name "Bruce Huici", jobTitle "Founder & CEO", worksFor Organization "Hallstat Industries Inc.", image, url, description, knowsAbout ["Foley catheters", "CAUTI prevention", "medical device design", "nursing"]
+  - `sameAs`: ["https://www.brucehuici.com", "TODO LinkedIn URL", "TODO Medium URL", other verified profiles]
+- On every page: `Organization` schema with `founder` → the Person `@id` (`https://www.hallstat.com/about/bruce-huici#person`).
+- On news posts: `NewsArticle` with `author` = the Person `@id`.
+
+### 11c. Name signals site-wide (natural, not stuffed)
+- Footer line on all pages: "Hallstat Industries Inc. — founded by Bruce Huici" linking to the founder page.
+- Homepage pull-quote attributed "— Bruce Huici, Founder & CEO" linking to the founder page.
+- Team card for Bruce links to the founder page.
+- Remove "| Bruce Huici" from the end of every page title (current site does this; it reads as stuffing). Only the founder page and news posts quoting him use his name in titles.
+- Unique `<title>` and meta description on every page; Open Graph + Twitter card images.
+
+### 11d. Newsroom — `/news`
+- MDX posts for press releases (e.g., U.S./nearby manufacturing evaluation release), conference appearances, milestones. Each post: date, author byline "Bruce Huici" linking to founder page, quote from Bruce, 300+ words.
+- RSS feed at `/news/rss.xml` so posts can be syndicated to LinkedIn/Medium (use canonical link back to hallstat.com).
+- Plan: 1–2 posts per month; consistent fresh content helps more than volume.
+
+### 11e. Technical SEO
+- Static generation for all pages; Lighthouse ≥ 95; Core Web Vitals passing.
+- `sitemap.xml` (include founder page and every news post), `robots.txt`, clean URLs, 301 redirects from old Wix URLs.
+- Google Search Console + Bing Webmaster Tools verification meta tags via env vars (`NEXT_PUBLIC_GSC_VERIFICATION`, `NEXT_PUBLIC_BING_VERIFICATION`); submit sitemap after launch.
+- Cross-link: brucehuici.com, LinkedIn (Featured + Experience → Hallstat), Medium bio should all link to `https://www.hallstat.com/about/bruce-huici`.
+
+### 11f. Expectations
+Search ranking changes typically take weeks to months, and no site build can guarantee a specific position or remove another site's result. This work strengthens accurate, authoritative pages so they compete well for the name.
