@@ -162,12 +162,17 @@ Goal: make hallstat.com a strong, credible result for searches of "Bruce Huici,"
 - 400–700 words: nursing background, why he invented the Hallstat system, inventions (MicroTip™, CallisterCatheter™, BermeoValve™, BactiStat™ Tubing), patents (TODO numbers), MBE certification, other ventures, speaking/press.
 - Professional headshot, filename `bruce-huici-founder-hallstat.jpg`, alt "Bruce Huici, founder and CEO of Hallstat Industries".
 - "In the News" list linking to press releases (`/news`) and outside coverage.
+- "Affiliations & Recognition" list:
+  - Member, Free At Last Coalition (501(c)(3) nonprofit) — link: https://www.freeatlastcoalition.org/team/bruce-huici/
+  - Top 100 Healthcare Leader, 2019 — TODO: confirm awarding organization and add link/proof before publishing
 - Links out to brucehuici.com, LinkedIn, Medium (rel="me").
 - Self-referencing canonical URL.
 
 ### 11b. Structured data (JSON-LD)
 - On `/about/bruce-huici`: `ProfilePage` with `mainEntity` = `Person`:
   - name "Bruce Huici", jobTitle "Founder & CEO", worksFor Organization "Hallstat Industries Inc.", image, url, description, knowsAbout ["Foley catheters", "CAUTI prevention", "medical device design", "nursing"]
+  - `memberOf`: {"@type": "Organization", "name": "Free At Last Coalition", "url": "https://www.freeatlastcoalition.org"}
+  - `subjectOf`: [{"@type": "WebPage", "url": "https://www.freeatlastcoalition.org/team/bruce-huici/"}] (third-party bio pages go here, not in sameAs)
   - `sameAs`: ["https://www.brucehuici.com", "https://www.linkedin.com/in/bruce-huici-207b1939", "https://medium.com/@BruceHuici", "https://www.crunchbase.com/person/bruce-huici-383a", "https://www.facebook.com/BruceHuici"]
 - On every page: `Organization` schema with `founder` → the Person `@id` (`https://www.hallstat.com/about/bruce-huici#person`).
 - On news posts: `NewsArticle` with `author` = the Person `@id`.
