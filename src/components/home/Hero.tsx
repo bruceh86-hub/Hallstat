@@ -9,7 +9,7 @@ export function Hero() {
         <div>
           <p className="text-sm font-semibold uppercase tracking-wider text-navy-200">Nurse-designed Foley system</p>
           <h1 id="hero-title" className="mt-4 text-display font-bold">
-            Built to Take On CAUTI
+            Stopping CAUTI Before It Starts
           </h1>
           <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
             A nurse-designed Foley insertion kit built around how bacteria reach the bladder.
