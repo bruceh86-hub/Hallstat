@@ -28,7 +28,7 @@ export default function StudiesPage() {
         </Container>
       </section>
 
-      <nav aria-label="Study topics" className="sticky top-20 z-40 md:top-28 border-b border-line bg-white/95 backdrop-blur">
+      <nav aria-label="Study topics" className="sticky top-16 z-40 md:top-20 border-b border-line bg-white/95 backdrop-blur">
         <Container>
           <ul className="-mx-2 flex gap-1 overflow-x-auto py-2 text-sm font-semibold">
             {topics.map((t) => (

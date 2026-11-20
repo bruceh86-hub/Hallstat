@@ -18,9 +18,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy text-white">
-      <Container className="flex h-20 items-center justify-between md:h-28">
+      <Container className="flex h-16 items-center justify-between md:h-20">
         <Link href="/" aria-label="Hallstat Industries home" className="-my-1 shrink-0 rounded-sm py-1">
-          <Logo priority className="h-14 md:h-[5.25rem]" />
+          <Logo priority className="h-6 md:h-8" />
         </Link>
 
         <nav aria-label="Main" className="hidden md:block">
