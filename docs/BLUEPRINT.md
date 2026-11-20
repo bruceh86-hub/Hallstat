@@ -28,7 +28,7 @@
 Primary goal of homepage: licensing/partnership leads from medical device companies. One action per section.
 
 1. **Hero** — full-width dark navy background; single product shot of the full Hallstat system.
-   - H1: "Stopping CAUTI before it starts"
+   - H1: "Stopping CAUTI Before It Starts" (title case; other headings use sentence case)
    - Subhead: "A nurse-designed Foley system engineered to cut catheter-associated infections at the source." (compliance option: "engineered to reduce catheter-associated infection risk at the source")
    - One button only: "See the Technology" → smooth-scroll to #product. No secondary button.
 2. **Stats bar** — dark band, white text, three numbers across, tight padding, each with a small footnote citation link:

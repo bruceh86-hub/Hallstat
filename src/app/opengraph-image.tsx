@@ -24,7 +24,7 @@ export default async function OpengraphImage() {
         }}
       >
         <img src={src} width={488} height={101} alt="" />
-        <div style={{ marginTop: 56, fontSize: 56, fontWeight: 700, lineHeight: 1.1 }}>Stopping CAUTI before it starts</div>
+        <div style={{ marginTop: 56, fontSize: 56, fontWeight: 700, lineHeight: 1.1 }}>Stopping CAUTI Before It Starts</div>
         <div style={{ marginTop: 20, fontSize: 30, color: "#c3cae6" }}>
           A nurse-designed Foley catheter system · Investigational device
         </div>
