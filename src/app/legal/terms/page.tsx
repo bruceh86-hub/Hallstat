@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/LegalPage";
-import { site } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "Terms for using hallstat.com, including the investigational device notice.",
+  description: "Terms for using hallstat.com, including product information.",
   alternates: { canonical: "/legal/terms" },
 };
 
@@ -14,10 +13,10 @@ export default function TermsPage() {
     <LegalPage title="Terms of Use" updated="November 20, 2026">
       <p>By using hallstat.com you agree to these terms. If you do not agree, please do not use the site.</p>
 
-      <h2>Investigational device</h2>
+      <h2>Product information</h2>
       <p>
-        <strong>{site.disclaimer}</strong> The Hallstat Foley catheter system is in development. Nothing on this site is
-        an offer to sell, and descriptions of the system reflect design intent, not proven clinical outcomes.
+        Information on this site is general and is not medical advice. Product specifications, availability and
+        regulatory status may change. Contact Hallstat for current details.
       </p>
 
       <h2>Not medical advice</h2>

@@ -9,7 +9,7 @@ import { site } from "@/config/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Hallstat Industries is a nurse-founded medical device company developing an investigational Foley catheter system designed to reduce CAUTI risk. Meet the leadership team and medical advisory board.",
+    "Hallstat Industries is a nurse-founded medical device company and maker of the Hallstat Foley Insertion Kit, a nurse-designed Foley catheter system designed to reduce CAUTI risk. Meet the leadership team and medical advisory board.",
   alternates: { canonical: "/about" },
 };
 
@@ -27,8 +27,8 @@ export default function AboutPage() {
             <Link href={site.founder.path} className="text-white underline underline-offset-4 hover:text-navy-200">
               {site.founder.name}
             </Link>
-            , a nurse. We are developing the Hallstat system, an investigational Foley catheter system
-            designed from the perspective of the nurses who place and manage these devices every day.
+            , a nurse. The Hallstat Foley Insertion Kit is a nurse-designed Foley catheter system designed to reduce
+            CAUTI risk, shaped by the nurses who place and manage these devices every day.
           </p>
         </Container>
       </section>

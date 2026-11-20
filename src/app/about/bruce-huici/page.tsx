@@ -106,7 +106,7 @@ export default function FounderPage() {
             <Link href="/technology#bactistat" className="font-semibold text-navy-600 hover:underline">
               BactiStat™ Tubing
             </Link>
-            . The system is investigational and not available for sale.
+            . The Hallstat system was designed from the bedside up.
           </p>
           {showPlaceholders && (
 <p className="rounded-lg border border-dashed border-amber-500 p-4 text-sm">

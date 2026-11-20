@@ -11,7 +11,7 @@ import { Figure } from "@/components/technology/Figure";
 import { AdhesionTimeline } from "@/components/technology/AdhesionTimeline";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationId } from "@/content/founder";
-import { isTodo, showPlaceholders } from "@/lib/placeholders";
+import { showPlaceholders } from "@/lib/placeholders";
 import { ValveFlowDiagram } from "@/components/technology/ValveFlowDiagram";
 import systemImg from "../../../public/images/product/hallstat-system.jpg";
 import microtipImg from "../../../public/images/product/microtip-vs-standard.jpg";
@@ -23,7 +23,7 @@ import benchCallisterImg from "../../../public/images/product/bench-callister-6w
 export const metadata: Metadata = {
   title: "Technology",
   description:
-    "Inside the investigational Hallstat Foley system: MicroTip™, CallisterCatheter™, BermeoValve™ and BactiStat™ Tubing, each designed to address a route to catheter-associated infection.",
+    "Inside the Hallstat Foley Insertion Kit, a nurse-designed Foley catheter system designed to reduce CAUTI risk: MicroTip™, CallisterCatheter™, BermeoValve™ and BactiStat™ Tubing.",
   alternates: { canonical: "/technology" },
 };
 
@@ -36,9 +36,9 @@ export default function TechnologyPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "MedicalDevice",
-          name: "Hallstat Foley Catheter System",
+          name: "Hallstat Foley Insertion Kit",
           description:
-            "Investigational nurse-designed Foley catheter system with four components (MicroTip, CallisterCatheter, BermeoValve, BactiStat Tubing), designed to reduce catheter-associated urinary tract infection risk. Not available for sale.",
+            "A nurse-designed Foley catheter system designed to reduce CAUTI risk, with four components: MicroTip, CallisterCatheter, BermeoValve and BactiStat Tubing.",
           url: `${site.url}/technology`,
           image: `${site.url}${systemImg.src}`,
           manufacturer: { "@type": "Organization", "@id": organizationId, name: site.legalName },
@@ -52,7 +52,7 @@ export default function TechnologyPage() {
               One system, four lines of defense
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/80">
-              The Hallstat Foley system combines four nurse-designed components. Each one is intended to address a
+              The Hallstat Foley Insertion Kit combines four nurse-designed components. Each one is intended to address a
               different route that bacteria use to reach the bladder.
             </p>
           </div>
@@ -162,49 +162,23 @@ export default function TechnologyPage() {
 
       <ComponentBlock section={bactistat} index={3} />
 
-      <section id="status" aria-labelledby="status-title" className="scroll-mt-32 py-16 md:py-24">
+      <section id="regulatory" aria-labelledby="regulatory-title" className="scroll-mt-32 py-16 md:py-24">
         <Container>
-          <h2 id="status-title" className="text-3xl font-bold tracking-tight md:text-4xl">
-            Development status
+          <h2 id="regulatory-title" className="text-3xl font-bold tracking-tight md:text-4xl">
+            Regulatory status
           </h2>
-          <div className="mt-8 overflow-x-auto rounded-md border border-line">
-            <table className="w-full min-w-[32rem] text-left">
-              <thead className="bg-mist text-sm text-navy">
-                <tr>
-                  <th scope="col" className="px-5 py-3 font-semibold">
-                    Component
-                  </th>
-                  <th scope="col" className="px-5 py-3 font-semibold">
-                    Stage
-                  </th>
-                  {showPlaceholders && (
-                    <th scope="col" className="px-5 py-3 font-semibold">
-                      IP status
-                    </th>
-                  )}
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-line">
-                {componentSections.map((c) => (
-                  <tr key={c.slug}>
-                    <th scope="row" className="px-5 py-4 font-semibold text-navy">
-                      <a href={`#${c.slug}`} className="hover:underline">
-                        {c.name}
-                      </a>
-                    </th>
-                    <td className="px-5 py-4 text-muted">
-                      {isTodo(c.status) && !showPlaceholders ? "In development" : c.status}
-                    </td>
-                    {showPlaceholders && <td className="px-5 py-4 text-muted">TODO: patent pending / patent number</td>}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="mt-6 max-w-3xl space-y-4 rounded-md border-l-4 border-accent bg-mist p-6 text-ink">
+            <p>
+              The Hallstat Foley Insertion Kit includes a Foley catheter cleared by FDA under 510(k). Clearance
+              documentation is available to qualified buyers and partners on request.
+            </p>
+            <p>Drainage components are 510(k)-exempt Class II devices under 21 CFR 876.5250.</p>
           </div>
-
-          <p className="mt-8 rounded-md border-l-4 border-accent bg-mist p-5 font-semibold text-navy">
-            {site.disclaimer}
-          </p>
+          {showPlaceholders && (
+            <p className="mt-6 rounded-md border border-dashed border-amber-500 p-4 text-sm text-muted">
+              TODO: component status and patent pending / patent numbers (shown only on previews).
+            </p>
+          )}
         </Container>
       </section>
 

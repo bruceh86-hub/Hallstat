@@ -8,11 +8,11 @@ Next.js 15 (App Router) · TypeScript · Tailwind CSS · shadcn/ui · Framer Mot
 ## Non-negotiable content rules
 1. The Hallstat system has exactly four components: MicroTip™, CallisterCatheter™, BermeoValve™, BactiStat™ Tubing. Use these exact spellings everywhere.
 2. Never mention a securement device or any coating technology.
-3. Use investigational, evidence-calibrated language ("designed to," "intended to reduce"). Never claim proven clinical outcomes.
+3. Use accurate, evidence-calibrated language ("designed to," "intended to reduce"). Never claim proven clinical outcomes, and never call the device investigational.
 4. Every statistic shows a visible citation link to its source (sources listed in BLUEPRINT section 3b).
 5. Do not invent studies, certifications, patent numbers, team bios, or logos. Use clearly marked placeholders (`TODO:`) instead.
 6. Founder name SEO is a core goal — implement BLUEPRINT section 11 exactly (founder page, Person/ProfilePage JSON-LD with sameAs, Organization.founder, newsroom with author bylines). No keyword stuffing, hidden text, or doorway pages.
-7. Footer includes: "Caution: Investigational device. Not available for sale." and the current year.
+7. Footer includes `site.disclaimer` and the current year.
 
 ## Homepage (one action per section)
 Hero → Stats bar → Problem (with founder pull-quote sidebar) → Product (image left, copy right) → Science grid (3–4 cards → /studies) → Trust bar → Partner With Us form (Name, Organization, Role dropdown, Email, Message).
