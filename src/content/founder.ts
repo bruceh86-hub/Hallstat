@@ -9,7 +9,7 @@ export const founder = {
   photo: "/images/team/bruce-huici-founder-hallstat.jpg",
   photoAlt: "Bruce Huici, founder and CEO of Hallstat Industries",
   description:
-    "Bruce Huici is a nurse, medical device inventor and the founder and CEO of Hallstat Industries, which is developing a nurse-designed Foley catheter system intended to reduce catheter-associated urinary tract infection risk.",
+    "Bruce Huici is a nurse with experience in cardiac catheterization and interventional radiology, a medical device inventor, and the founder and CEO of Hallstat Industries, which is developing a nurse-designed Foley catheter system intended to reduce catheter-associated urinary tract infection risk.",
   knowsAbout: ["Foley catheters", "CAUTI prevention", "medical device design", "nursing"],
   links: [
     { label: "brucehuici.com", href: "https://www.brucehuici.com" },

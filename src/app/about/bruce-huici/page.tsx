@@ -75,10 +75,15 @@ export default function FounderPage() {
             catheters every day, yet they rarely have a say in how those devices are designed. Hallstat exists to
             change that.
           </p>
+          <p>
+            His nursing experience includes cardiac catheterization and interventional radiology. He invented the
+            Hallstat Foley System after seeing firsthand the challenges that urinary catheters can create for patients
+            and care teams.
+          </p>
           {/* TODO(owner): nursing background — years in practice, specialties, settings (2–3 sentences). */}
           {showPlaceholders && (
 <p className="rounded-lg border border-dashed border-amber-500 p-4 text-sm">
-            TODO: Nursing background — years in practice, specialties and care settings.
+            TODO: Years in practice and other care settings (optional).
           </p>
 )}
 
