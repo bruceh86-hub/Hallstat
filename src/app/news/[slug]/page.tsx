@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ExternalLink } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Container } from "@/components/Container";
 import { JsonLd } from "@/components/JsonLd";
@@ -46,6 +47,7 @@ export default async function NewsPostPage({ params }: { params: Promise<{ slug:
           datePublished: post.date,
           mainEntityOfPage: url,
           url,
+          ...(post.source ? { isBasedOn: post.source } : {}),
           ...(post.image ? { image: [`${site.url}${post.image}`] } : {}),
           author: isFounder
             ? { "@type": "Person", "@id": personId, name: founder.name, url: `${site.url}${founder.path}` }
@@ -76,6 +78,18 @@ export default async function NewsPostPage({ params }: { params: Promise<{ slug:
               post.author
             )}
           </p>
+          {post.source && (
+            <a
+              href={post.source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-sm border border-white/40 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10"
+            >
+              View original press release{post.sourceName ? ` on ${post.sourceName}` : ""}
+              <ExternalLink aria-hidden className="size-4" />
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
+          )}
         </Container>
       </header>
       <Container className="py-16 md:py-20">

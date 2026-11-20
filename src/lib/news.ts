@@ -12,6 +12,9 @@ export type Post = {
   description: string;
   author: string;
   image?: string;
+  /** Link to the originally distributed release (e.g. a wire service). */
+  source?: string;
+  sourceName?: string;
   content: string;
 };
 
@@ -31,6 +34,8 @@ export function getPosts(): Post[] {
         description: String(data.description ?? ""),
         author: String(data.author ?? "Bruce Huici"),
         image: data.image ? String(data.image) : undefined,
+        source: data.source ? String(data.source) : undefined,
+        sourceName: data.sourceName ? String(data.sourceName) : undefined,
         content,
       };
     })
