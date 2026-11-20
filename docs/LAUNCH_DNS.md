@@ -1,5 +1,14 @@
 # Launch-day DNS move (Wix → GoDaddy → Vercel)
 
+> **Status (Nov 2026): DONE.** Nameservers switched to GoDaddy (ns47/ns48.domaincontrol.com); all records below
+> added; Vercel shows hallstat.com (308 → www) and www.hallstat.com as Valid. Remaining: confirm email/forms,
+> wait 1–2 days, then cancel the Wix plan (disconnect the domain, never delete/transfer).
+>
+> Final GoDaddy records: A @ 216.198.79.1 · CNAME www c54cc9b0a91ed6a2.vercel-dns-017.com · MX @ aspmx.l.google.com (10) ·
+> TXT @ google-site-verification · TXT @ v=spf1 include:_spf.google.com ~all · TXT _dmarc v=DMARC1; p=none; ·
+> Resend: TXT resend._domainkey.contact, CNAME rsend.contact / send.contact → *.forge.rmta.net.
+> Email is Google Workspace, billed by Google directly (not affected by cancelling Wix).
+
 hallstat.com is registered at **GoDaddy**, but its DNS is currently served by **Wix**
 (nameservers `ns0.wixdns.net`, `ns1.wixdns.net`). Leaving Wix means moving DNS to GoDaddy.
 Do everything below in one sitting, in this order. Do **not** cancel Wix until step 6 is done.
