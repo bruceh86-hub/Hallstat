@@ -7,7 +7,7 @@ export function TeamCard({ member }: { member: TeamMember }) {
   const bio = filled(member.bio);
   return (
     <article className="flex w-full flex-col items-center rounded-md border border-line bg-white p-6 text-center">
-      <Avatar name={member.name} photo={member.photo} className="w-28" />
+      <Avatar name={member.name} photo={member.photo} alt={`${member.name}, ${member.title}`} className="w-28" />
       <h3 className="mt-4 text-lg font-semibold text-navy">
         {member.profile ? (
           <Link href={member.profile} className="hover:underline">

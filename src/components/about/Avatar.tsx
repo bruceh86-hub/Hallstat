@@ -19,7 +19,7 @@ export function Avatar({ name, photo, alt, className }: { name: string; photo?: 
         alt={alt ?? name}
         width={320}
         height={320}
-        className={cn("aspect-square rounded-full object-cover", className)}
+        className={cn("aspect-square rounded-full bg-white object-cover ring-1 ring-line", className)}
       />
     );
   }
