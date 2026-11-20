@@ -86,7 +86,12 @@ export default function TechnologyPage() {
       <ComponentBlock
         section={callister}
         index={1}
-        figure={<Figure src={catheterImg} alt="The CallisterCatheter, a clear silicone Foley catheter" />}
+        figure={
+          <Figure
+            src={catheterImg}
+            alt="The CallisterCatheter, a clear silicone Foley catheter, with a magnified molecular illustration"
+          />
+        }
       >
         <div className="mt-12 rounded-md border border-line bg-white p-6 md:p-8">
           <div className="flex flex-wrap items-center gap-2">
