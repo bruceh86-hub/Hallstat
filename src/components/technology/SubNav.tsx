@@ -14,8 +14,8 @@ export function SubNav() {
             </li>
           ))}
           <li className="shrink-0">
-            <a href="#status" className="block rounded-md px-3 py-2 text-muted hover:bg-mist">
-              Status
+            <a href="#regulatory" className="block rounded-md px-3 py-2 text-muted hover:bg-mist">
+              Regulatory
             </a>
           </li>
         </ul>

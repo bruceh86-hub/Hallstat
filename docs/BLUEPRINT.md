@@ -13,7 +13,7 @@
 | Hero | One-line mission + patient/clinician imagery | Clinical problem framing (infection prevention) | Bold mission statement | Lead with CAUTI problem + "nurse-designed" solution |
 | Navigation | Products, Healthcare Professionals, Patients, About, Investors | Product catalog by clinical area | Audience-split menus | Technology · Clinical Need · About · Investors · News · Contact |
 | Trust | Quality/regulatory pages, ISO statements | Clinical evidence, IFUs, education | Safety & quality pages | Development-stage status, quality plan, regulatory pathway |
-| Evidence | Publications, outcome data | Infection-prevention resources | Clinical trials pages | Cite CAUTI burden data (CDC/AHRQ); label Hallstat data as preclinical/investigational |
+| Evidence | Publications, outcome data | Infection-prevention resources | Clinical trials pages | Cite CAUTI burden data (CDC/AHRQ); label Hallstat bench data as internal testing |
 | Investors | Dedicated IR section | IR section | IR section | Gated investor room with deck, NDA request |
 | Visual style | Lots of white space, single brand color, real photography | Clinical blues, diagrams | Strong typography | Navy/teal palette, clean sans-serif, product 3D renders |
 
@@ -21,15 +21,15 @@
 - Palette: deep navy (#0B2545), clinical teal (#13A89E), white, cool gray (#F4F6F8). One accent only.
 - Type: Inter or Source Sans 3; large headlines, 16–18px body.
 - Imagery: product renders/exploded view of valve and tip, nurse-at-bedside photography (licensed), no generic stock gradients.
-- Tone: evidence-calibrated. Use "investigational," "designed to," "intended to reduce." Never claim proven CAUTI reduction until data exists. Required footer note: "Caution: Investigational device. Not available for sale in the United States."
+- Tone: Use accurate, evidence-calibrated language ("designed to," "intended to reduce"). Never claim proven clinical outcomes, and never call the device investigational. Footer shows `site.disclaimer` (product and regulatory status) and the current year.
 - Accessibility: WCAG 2.1 AA, keyboard nav, alt text, contrast ≥ 4.5:1.
 
 ## 3b. Homepage spec (final — owner-approved skeleton)
 Primary goal of homepage: licensing/partnership leads from medical device companies. One action per section.
 
 1. **Hero** — full-width dark navy background; single product shot of the full Hallstat system.
-   - H1: "Stopping CAUTI Before It Starts" (title case; other headings use sentence case)
-   - Subhead: "A nurse-designed Foley system engineered to cut catheter-associated infections at the source." (compliance option: "engineered to reduce catheter-associated infection risk at the source")
+   - H1: "Built to Take On CAUTI" (title case; other headings use sentence case). Eyebrow: "Nurse-designed Foley system".
+   - Subhead: "A nurse-designed Foley insertion kit built around how bacteria reach the bladder."
    - One button only: "See the Technology" → smooth-scroll to #product. No secondary button.
 2. **Stats bar** — dark band, white text, three numbers across, tight padding, each with a small footnote citation link:
    - "13,000+" — "U.S. deaths associated with UTIs each year" — CDC CAUTI Guideline: https://www.cdc.gov/infection-control/hcp/cauti/background.html (note: CDC says *associated with UTIs*, not "preventable"; CDC estimates up to 9,000 CAUTI deaths/yr could be prevented — use "Up to 9,000 preventable deaths" if you want the word "preventable")
@@ -93,7 +93,7 @@ Open questions for owner:
 ```
 
 ## 7. Prompt for Claude (paste into Claude with repo access)
-> Build the Hallstat Industries website in this repo per docs/BLUEPRINT.md. Use Next.js 15 App Router, TypeScript, Tailwind, shadcn/ui. Implement every page in the sitemap with real placeholder copy written in evidence-calibrated, investigational language. Create reusable components listed in section 6. Add the contact API route with Zod validation and Resend email delivery (env: RESEND_API_KEY, CONTACT_TO_EMAIL). Add Vercel Analytics, sitemap, robots, JSON-LD. Ensure WCAG AA and mobile-first layout. Open a pull request per page group so each gets a Vercel preview.
+> Build the Hallstat Industries website in this repo per docs/BLUEPRINT.md. Use Next.js 15 App Router, TypeScript, Tailwind, shadcn/ui. Implement every page in the sitemap with real placeholder copy written in accurate, evidence-calibrated language (never "investigational"). Create reusable components listed in section 6. Add the contact API route with Zod validation and Resend email delivery (env: RESEND_API_KEY, CONTACT_TO_EMAIL). Add Vercel Analytics, sitemap, robots, JSON-LD. Ensure WCAG AA and mobile-first layout. Open a pull request per page group so each gets a Vercel preview.
 
 ## 8. Recommended connectors / integrations
 | Priority | Service | Purpose |
@@ -127,7 +127,7 @@ Fix: unexplained "NovaStat" label (define it or remove), typo "free of bacterial
 
 Keep and redesign: the "Bacterial Adhesion Timeline" (seconds → minutes → hours → days → encrustation) as an animated horizontal timeline with a literature citation. Keep "Our Design" valve challenges as a 3-card "Problem → Our approach" block.
 
-Technology page layout: hero with full-system render → sticky sub-nav (MicroTip · CallisterCatheter · BermeoValve · BactiStat) → one section per component (problem, design, status, figure) → adhesion timeline → "Development status" table → investigational-device disclaimer → CTA (Request technical brief / Partner with us).
+Technology page layout: hero with full-system render → sticky sub-nav (MicroTip · CallisterCatheter · BermeoValve · BactiStat) → one section per component (problem, design, status, figure) → adhesion timeline → "Development status" table → regulatory status block → CTA (Request technical brief / Partner with us).
 
 ### 9b. Our Team page (/our-team → /about#team)
 Source: https://www.hallstat.com/our-team
@@ -147,7 +147,7 @@ Action: collect a bio + headshot + LinkedIn + permission to publish from each pe
 Data file for Claude: `/content/team.json` with fields name, credentials, title, group, bio, photo, linkedin.
 
 ## 10. Launch checklist
-- Replace 2022 footer; add investigational-device disclaimer
+- Replace 2022 footer; footer shows `site.disclaimer` (product and regulatory status)
 - Verify all statistics carry a citation link
 - Confirm patent/trademark wording (™ vs ®) with counsel
 - Redirect old URLs (301) in vercel.json: /hallstat-foley-system → /technology, /our-team → /about#team

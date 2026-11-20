@@ -1,6 +1,7 @@
 /**
  * /technology content — rewritten from the current product page per docs/BLUEPRINT.md section 9a.
- * Rules: exactly four components, no securement device, no coating technology, investigational language only.
+ * Rules: exactly four components, no securement device, no coating technology, evidence-calibrated language only
+ * ("designed to", "intended to reduce"); never claim proven outcomes; never write "FDA approved/cleared/registered".
  */
 
 export type ComponentSection = {
@@ -24,7 +25,7 @@ export const componentSections: ComponentSection[] = [
       "The MicroTip™ is less than one-third the size of a standard catheter tip. It is designed to reduce contact with the bladder wall, and the irritation that comes with it, during drainage.",
       "The tip is intended to be adaptable to a range of catheter designs without a significant increase in manufacturing cost.",
     ],
-    status: "TODO: confirm development stage",
+    status: "TODO: component status (optional)",
   },
   {
     slug: "callistercatheter",
@@ -36,7 +37,7 @@ export const componentSections: ComponentSection[] = [
       "The CallisterCatheter™ is made of 100% medical-grade silicone and is designed to resist bacterial adhesion on the catheter surface.",
       // TODO: add a peer-reviewed citation before publishing any silicone-vs-latex adhesion comparison.
     ],
-    status: "TODO: confirm development stage",
+    status: "TODO: component status (optional)",
   },
   {
     slug: "bermeovalve",
@@ -48,7 +49,7 @@ export const componentSections: ComponentSection[] = [
       "The BermeoValve™ is a one-way valve intended to reduce urine backflow from the drainage tubing. It is designed to fit at the end of standard drainage tubing and to be compatible with catheters from various manufacturers.",
       "It uses medical-grade elastomers and minimal moving parts to simplify manufacturing.",
     ],
-    status: "TODO: confirm development stage",
+    status: "TODO: component status (optional)",
   },
   {
     slug: "bactistat",
@@ -58,9 +59,9 @@ export const componentSections: ComponentSection[] = [
       "When drainage tubing kinks, urine flow can stop and urine can pool in the line, giving bacteria more time to grow.",
     design: [
       "BactiStat™ Tubing is a softer PVC drainage tubing with a spiral support designed to reduce kinking and keep urine flowing toward the bag.",
-      "The BactiStat™ technology, designed to limit bacterial growth in the tubing, is in development.", // TODO(owner): add a non-confidential description
+      "BactiStat™ Tubing is infused with BactiStat technology, designed to reduce bacterial development as urine settles in the line.",
     ],
-    status: "In development — TODO: confirm stage",
+    status: "TODO: component status (optional)",
   },
 ];
 

@@ -20,7 +20,7 @@ Placeholders marked TODO show on preview links and are **hidden automatically on
 | MBE certification (body, date, proof) | Trust bar, About, founder page |
 | IFAH recognition (full name, badge file) | Trust bar |
 | Top 100 Healthcare Leader 2019 (awarding organization, proof) | Founder page |
-| Development stage per component | Technology page |
+| Component status (optional) | Technology page |
 | Bench observation method, date, conditions, sample size | Technology page (CallisterCatheter) |
 | Citation for the bacterial adhesion timeline | Technology page |
 | Non-confidential description of BactiStat technology | Technology page |

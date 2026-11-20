@@ -12,7 +12,7 @@ export function Footer() {
         <div>
           <Logo shape="mark" className="h-16" />
           <p className="mt-3 max-w-sm text-sm">
-            A nurse-designed Foley catheter system in development, intended to reduce catheter-associated infection risk.
+            A nurse-designed Foley catheter system intended to reduce catheter-associated infection risk.
           </p>
           <p className="mt-4 text-sm">
             {site.legalName} — founded by{" "}
@@ -50,9 +50,9 @@ export function Footer() {
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-2 py-6 text-sm sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-semibold text-white">{site.disclaimer}</p>
-          <p>
+        <Container className="flex flex-col gap-2 py-6 text-sm sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+          <p className="max-w-3xl font-semibold text-white">{site.disclaimer}</p>
+          <p className="shrink-0">
             © {year} {site.legalName}
           </p>
         </Container>
