@@ -6,7 +6,7 @@ Do everything below in one sitting, in this order. Do **not** cancel Wix until s
 
 ## 1. Before changing anything
 - [ ] Screenshot every section of Wix → Domains → hallstat.com → Manage DNS Records (A, AAAA, CNAME, MX, TXT, SRV).
-- [ ] Confirm whether any email uses @hallstat.com (MX records present?) and where it is hosted.
+- [ ] **info@hallstat.com is a live inbox** (confirmed Nov 2026). Its MX (and any related TXT/CNAME) records are in Wix DNS and MUST be copied to GoDaddy, or that inbox stops receiving mail. The website contact form delivers to this inbox.
 
 ## 2. Records to recreate in GoDaddy
 Copy exact values from the source shown (DNS values are public; none of these are secrets).
