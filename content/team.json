@@ -24,7 +24,7 @@
     "title": "Director/CFO",
     "group": "Leadership",
     "bio": "TODO",
-    "photo": "",
+    "photo": "/images/team/carlos-pena.jpg",
     "linkedin": ""
   },
   {
@@ -51,7 +51,7 @@
     "title": "Medical Advisor",
     "group": "Medical Advisory Board",
     "bio": "TODO",
-    "photo": "",
+    "photo": "/images/team/mohamad-el-kassim.jpg",
     "linkedin": ""
   },
   {
@@ -60,7 +60,7 @@
     "title": "Medical Advisor",
     "group": "Medical Advisory Board",
     "bio": "TODO",
-    "photo": "",
+    "photo": "/images/team/justin-speigel.jpg",
     "linkedin": ""
   },
   {
@@ -69,7 +69,7 @@
     "title": "Medical Advisor",
     "group": "Medical Advisory Board",
     "bio": "TODO",
-    "photo": "",
+    "photo": "/images/team/nora-homsi.jpg",
     "linkedin": ""
   }
 ]
