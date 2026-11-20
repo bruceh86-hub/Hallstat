@@ -58,7 +58,7 @@ export const componentSections: ComponentSection[] = [
       "When drainage tubing kinks, urine flow can stop and urine can pool in the line, giving bacteria more time to grow.",
     design: [
       "BactiStat™ Tubing is a softer PVC drainage tubing with a spiral support designed to reduce kinking and keep urine flowing toward the bag.",
-      "The BactiStat™ technology that is designed to limit bacterial growth in the tubing is in development. A non-confidential summary will be added here.", // TODO(owner): non-confidential description
+      "The BactiStat™ technology, designed to limit bacterial growth in the tubing, is in development.", // TODO(owner): add a non-confidential description
     ],
     status: "In development — TODO: confirm stage",
   },

@@ -1,6 +1,7 @@
 import type { ComponentSection } from "@/content/technology";
 import { Container } from "@/components/Container";
 import { cn } from "@/lib/utils";
+import { isTodo, showPlaceholders } from "@/lib/placeholders";
 
 export function ComponentBlock({
   section,
@@ -42,7 +43,9 @@ export function ComponentBlock({
 
             <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-line bg-white px-3 py-1 text-sm">
               <span className="font-semibold text-navy">Status:</span>
-              <span className="text-muted">{section.status}</span>
+              <span className="text-muted">
+                {isTodo(section.status) && !showPlaceholders ? "In development" : section.status}
+              </span>
             </p>
           </div>
           {figure && <div className={cn(flip && "md:order-1")}>{figure}</div>}

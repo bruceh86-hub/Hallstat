@@ -9,6 +9,9 @@ import { SubNav } from "@/components/technology/SubNav";
 import { ComponentBlock } from "@/components/technology/ComponentBlock";
 import { Figure } from "@/components/technology/Figure";
 import { AdhesionTimeline } from "@/components/technology/AdhesionTimeline";
+import { JsonLd } from "@/components/JsonLd";
+import { organizationId } from "@/content/founder";
+import { isTodo, showPlaceholders } from "@/lib/placeholders";
 import { ValveFlowDiagram } from "@/components/technology/ValveFlowDiagram";
 import systemImg from "../../../public/images/product/hallstat-system.jpg";
 import microtipImg from "../../../public/images/product/microtip-vs-standard.jpg";
@@ -29,6 +32,18 @@ const [microtip, callister, bermeo, bactistat] = componentSections;
 export default function TechnologyPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "MedicalDevice",
+          name: "Hallstat Foley Catheter System",
+          description:
+            "Investigational nurse-designed Foley catheter system with four components (MicroTip, CallisterCatheter, BermeoValve, BactiStat Tubing), designed to reduce catheter-associated urinary tract infection risk. Not available for sale.",
+          url: `${site.url}/technology`,
+          image: `${site.url}${systemImg.src}`,
+          manufacturer: { "@type": "Organization", "@id": organizationId, name: site.legalName },
+        }}
+      />
       <section aria-labelledby="tech-title" className="bg-navy text-white">
         <Container className="grid items-center gap-12 py-16 md:grid-cols-[1.1fr_1fr] md:py-24">
           <div>
@@ -109,8 +124,8 @@ export default function TechnologyPage() {
           </div>
           {/* TODO(owner): method, date, test conditions and sample size for this observation (BLUEPRINT 9a). */}
           <p className="mt-6 text-sm text-muted">
-            Method, date, conditions and sample size: TODO. Results from a single internal observation may not reflect
-            clinical performance.
+            {showPlaceholders && "Method, date, conditions and sample size: TODO. "}Results from a single internal
+            observation may not reflect clinical performance.
           </p>
         </div>
       </ComponentBlock>
@@ -157,9 +172,11 @@ export default function TechnologyPage() {
                   <th scope="col" className="px-5 py-3 font-semibold">
                     Stage
                   </th>
-                  <th scope="col" className="px-5 py-3 font-semibold">
-                    IP status
-                  </th>
+                  {showPlaceholders && (
+                    <th scope="col" className="px-5 py-3 font-semibold">
+                      IP status
+                    </th>
+                  )}
                 </tr>
               </thead>
               <tbody className="divide-y divide-line">
@@ -170,8 +187,10 @@ export default function TechnologyPage() {
                         {c.name}
                       </a>
                     </th>
-                    <td className="px-5 py-4 text-muted">{c.status}</td>
-                    <td className="px-5 py-4 text-muted">TODO: patent pending / patent number</td>
+                    <td className="px-5 py-4 text-muted">
+                      {isTodo(c.status) && !showPlaceholders ? "In development" : c.status}
+                    </td>
+                    {showPlaceholders && <td className="px-5 py-4 text-muted">TODO: patent pending / patent number</td>}
                   </tr>
                 ))}
               </tbody>

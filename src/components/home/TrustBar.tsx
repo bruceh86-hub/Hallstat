@@ -1,12 +1,15 @@
 import { Container } from "@/components/Container";
 import { trustBadges } from "@/content/home";
+import { showPlaceholders } from "@/lib/placeholders";
 
 export function TrustBar() {
+  const badges = trustBadges.filter((b) => b.verified || showPlaceholders);
+  if (!badges.length) return null;
   return (
     <section aria-label="Certifications and recognition" className="border-y border-line py-10">
       <Container>
         <ul className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-          {trustBadges.map((b) => (
+          {badges.map((b) => (
             <li
               key={b.label}
               className={

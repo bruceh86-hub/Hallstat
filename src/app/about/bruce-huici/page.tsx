@@ -6,6 +6,7 @@ import { Avatar } from "@/components/about/Avatar";
 import { founder, organizationId, personId } from "@/content/founder";
 import { site } from "@/config/site";
 import { formatDate, getPosts } from "@/lib/news";
+import { showPlaceholders } from "@/lib/placeholders";
 
 export const metadata: Metadata = {
   title: { absolute: "Bruce Huici — Founder & CEO, Hallstat Industries" },
@@ -75,9 +76,11 @@ export default function FounderPage() {
             change that.
           </p>
           {/* TODO(owner): nursing background — years in practice, specialties, settings (2–3 sentences). */}
-          <p className="rounded-lg border border-dashed border-amber-500 p-4 text-sm">
+          {showPlaceholders && (
+<p className="rounded-lg border border-dashed border-amber-500 p-4 text-sm">
             TODO: Nursing background — years in practice, specialties and care settings.
           </p>
+)}
 
           <h2 className="pt-4 text-2xl font-bold tracking-tight text-navy">The Hallstat system</h2>
           <p>
@@ -100,10 +103,12 @@ export default function FounderPage() {
             </Link>
             . The system is investigational and not available for sale.
           </p>
-          <p className="rounded-lg border border-dashed border-amber-500 p-4 text-sm">
+          {showPlaceholders && (
+<p className="rounded-lg border border-dashed border-amber-500 p-4 text-sm">
             TODO: Why he invented the system (a specific moment or patient experience, 2–3 sentences); patents
             (numbers); MBE certification; other ventures; speaking and press.
           </p>
+)}
 
           <blockquote className="border-l-4 border-accent pl-5 text-xl font-semibold text-navy">
             “Designed by nurses. Built for nurses.”
@@ -138,7 +143,7 @@ export default function FounderPage() {
               Affiliations &amp; recognition
             </h2>
             <ul className="mt-3 space-y-3 text-sm text-muted">
-              {founder.affiliations.map((a) =>
+              {founder.affiliations.filter((a) => a.verified || showPlaceholders).map((a) =>
                 a.verified ? (
                   <li key={a.label}>
                     <a href={a.href} target="_blank" rel="noopener noreferrer" className="hover:underline">

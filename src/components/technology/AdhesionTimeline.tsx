@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { adhesionTimeline } from "@/content/technology";
+import { showPlaceholders } from "@/lib/placeholders";
 import timelineImg from "../../../public/images/product/adhesion-timeline.jpg";
 
 export function AdhesionTimeline() {
@@ -27,7 +28,7 @@ export function AdhesionTimeline() {
           ))}
         </ol>
         {/* TODO(owner): replace with a peer-reviewed citation for the adhesion timeline. */}
-        <p className="mt-6 text-xs text-muted">Source: TODO: add literature citation for this timeline.</p>
+        {showPlaceholders && <p className="mt-6 text-xs text-muted">Source: TODO: add literature citation for this timeline.</p>}
       </div>
     </section>
   );

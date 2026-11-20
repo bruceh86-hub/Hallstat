@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
+import { Suspense } from "react";
 import { ContactForm } from "@/components/ContactForm";
-import { isContactTopic } from "@/lib/contact";
+import { ContactFormFromQuery } from "@/components/ContactFormFromQuery";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -17,10 +18,7 @@ const audiences = [
   { title: "Media", text: "Interview and press requests for Hallstat and our founder." },
 ];
 
-export default async function ContactPage({ searchParams }: { searchParams: Promise<{ topic?: string }> }) {
-  const { topic } = await searchParams;
-  const defaultTopic = isContactTopic(topic) ? topic : "partnership";
-
+export default function ContactPage() {
   return (
     <>
       <section aria-labelledby="contact-title" className="bg-navy text-white">
@@ -45,7 +43,9 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
           ))}
         </ul>
         <div className="rounded-md border border-line bg-white p-6 md:p-8">
-          <ContactForm showTopic defaultTopic={defaultTopic} source="contact-page" submitLabel="Send message" />
+          <Suspense fallback={<ContactForm showTopic source="contact-page" submitLabel="Send message" />}>
+            <ContactFormFromQuery />
+          </Suspense>
         </div>
       </Container>
     </>

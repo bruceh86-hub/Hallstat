@@ -13,7 +13,7 @@ export function ProductVisual({ className, priority = false }: { className?: str
         src={systemPhoto}
         alt="The Hallstat Foley catheter system: silicone catheter, drainage tubing, urine meter and collection bag"
         className="mx-auto h-auto max-h-[28rem] w-auto"
-        sizes="(min-width: 768px) 40vw, 90vw"
+        sizes="(min-width: 768px) 330px, 80vw"
         placeholder="blur"
         priority={priority}
       />
