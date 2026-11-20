@@ -1,5 +1,5 @@
 import { Container } from "@/components/Container";
-import { PartnerForm } from "./PartnerForm";
+import { ContactForm } from "@/components/ContactForm";
 
 export function PartnerCTA() {
   return (
@@ -14,7 +14,7 @@ export function PartnerCTA() {
             market.
           </p>
         </div>
-        <PartnerForm />
+        <ContactForm tone="dark" source="homepage-partner" submitLabel="Partner With Us" idPrefix="pf" />
       </Container>
     </section>
   );

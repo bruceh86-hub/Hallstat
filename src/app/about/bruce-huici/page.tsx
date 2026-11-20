@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Avatar } from "@/components/about/Avatar";
 import { founder, organizationId, personId } from "@/content/founder";
 import { site } from "@/config/site";
+import { formatDate, getPosts } from "@/lib/news";
 
 export const metadata: Metadata = {
   title: { absolute: "Bruce Huici — Founder & CEO, Hallstat Industries" },
@@ -157,13 +158,29 @@ export default function FounderPage() {
             <h2 id="news-title" className="text-sm font-semibold uppercase tracking-wider text-navy">
               In the news
             </h2>
-            {/* Populated from /news in Step 6, plus outside coverage. */}
-            <p className="mt-3 text-sm text-muted">
-              Press releases and coverage will appear here.{" "}
-              <Link href="/news" className="font-semibold text-navy-600 hover:underline">
-                Visit the newsroom
-              </Link>
-            </p>
+            {/* Press releases by Bruce from /news. TODO(owner): add outside coverage links. */}
+            {(() => {
+              const posts = getPosts().filter((p) => p.author === founder.name).slice(0, 5);
+              return posts.length ? (
+                <ul className="mt-3 space-y-3 text-sm">
+                  {posts.map((p) => (
+                    <li key={p.slug}>
+                      <Link href={`/news/${p.slug}`} className="font-semibold text-navy-600 hover:underline">
+                        {p.title}
+                      </Link>
+                      <span className="block text-muted">{formatDate(p.date)}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-3 text-sm text-muted">
+                  Press releases and coverage will appear here.{" "}
+                  <Link href="/news" className="font-semibold text-navy-600 hover:underline">
+                    Visit the newsroom
+                  </Link>
+                </p>
+              );
+            })()}
           </section>
         </aside>
       </Container>
