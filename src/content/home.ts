@@ -46,9 +46,9 @@ export type TrustBadge = { label: string; detail: string; verified: boolean };
 
 // Only show a badge as verified once written permission / proof is on file (BLUEPRINT 3b.6).
 export const trustBadges: TrustBadge[] = [
-  { label: "MBE Certified", detail: "TODO: certifying body and certificate proof", verified: false },
-  { label: "IFAH Recognition", detail: "TODO: full name of the recognition and badge file", verified: false },
-  { label: "Patent pending", detail: "TODO: application / patent numbers", verified: false },
+  { label: "MBE Certified", detail: "Show once the certificate is on file", verified: false },
+  { label: "IFAH Recognition", detail: "Show once the full name and badge file are on file", verified: false },
+  { label: "Patent pending", detail: "Show once application or patent numbers are confirmed", verified: false },
 ];
 
 export const partnerRoles = [

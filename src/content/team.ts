@@ -14,5 +14,5 @@ export type TeamMember = {
 export const members = team as TeamMember[];
 export const groups = ["Leadership", "Medical Advisory Board"] as const;
 
-/** Treat "TODO" / empty values as missing so they never render as real content. */
-export const filled = (v?: string) => (v && !v.startsWith("TODO") ? v : "");
+/** Empty values are treated as missing and not rendered. */
+export const filled = (v?: string) => (v?.trim() ? v : "");

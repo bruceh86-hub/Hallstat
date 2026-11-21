@@ -54,7 +54,6 @@ export default function AboutPage() {
               </Link>{" "}
               and clearly separated from our own early bench work.
             </p>
-            {/* TODO(owner): MBE certification and other credentials, once proof is on file. */}
           </div>
         </Container>
       </section>

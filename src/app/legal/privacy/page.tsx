@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/legal/privacy" },
 };
 
-// TODO(legal): attorney review before launch. Content describes what the site actually does as built.
+// Describes what the site actually does as built.
 export default function PrivacyPage() {
   return (
     <LegalPage title="Privacy Policy" updated="November 20, 2026">

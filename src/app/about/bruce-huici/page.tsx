@@ -6,7 +6,6 @@ import { Avatar } from "@/components/about/Avatar";
 import { founder, organizationId, personId } from "@/content/founder";
 import { site } from "@/config/site";
 import { formatDate, getPosts } from "@/lib/news";
-import { showPlaceholders } from "@/lib/placeholders";
 
 export const metadata: Metadata = {
   title: { absolute: "Bruce Huici — Founder & CEO, Hallstat Industries" },
@@ -80,12 +79,6 @@ export default function FounderPage() {
             Hallstat Foley System after seeing firsthand the challenges that urinary catheters can create for patients
             and care teams.
           </p>
-          {/* TODO(owner): nursing background — years in practice, specialties, settings (2–3 sentences). */}
-          {showPlaceholders && (
-<p className="rounded-lg border border-dashed border-amber-500 p-4 text-sm">
-            TODO: Years in practice and other care settings (optional).
-          </p>
-)}
 
           <h2 className="pt-4 text-2xl font-bold tracking-tight text-navy">The Hallstat system</h2>
           <p>
@@ -108,12 +101,6 @@ export default function FounderPage() {
             </Link>
             . The Hallstat system was designed from the bedside up.
           </p>
-          {showPlaceholders && (
-<p className="rounded-lg border border-dashed border-amber-500 p-4 text-sm">
-            TODO: Why he invented the system (a specific moment or patient experience, 2–3 sentences); patents
-            (numbers); MBE certification; other ventures; speaking and press.
-          </p>
-)}
 
           <blockquote className="border-l-4 border-accent pl-5 text-xl font-semibold text-navy">
             “Designed by nurses. Built for nurses.”
@@ -148,19 +135,13 @@ export default function FounderPage() {
               Affiliations &amp; recognition
             </h2>
             <ul className="mt-3 space-y-3 text-sm text-muted">
-              {founder.affiliations.filter((a) => a.verified || showPlaceholders).map((a) =>
-                a.verified ? (
+              {founder.affiliations.map((a) => (
                   <li key={a.label}>
                     <a href={a.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
                       {a.label}
                     </a>
                   </li>
-                ) : (
-                  <li key={a.label} className="rounded-lg border border-dashed border-amber-500 p-3">
-                    {a.label}
-                  </li>
-                ),
-              )}
+              ))}
             </ul>
           </section>
 
@@ -168,7 +149,7 @@ export default function FounderPage() {
             <h2 id="news-title" className="text-sm font-semibold uppercase tracking-wider text-navy">
               In the news
             </h2>
-            {/* Press releases by Bruce from /news. TODO(owner): add outside coverage links. */}
+            {/* Press releases by Bruce from /news. */}
             {(() => {
               const posts = getPosts().filter((p) => p.author === founder.name).slice(0, 5);
               return posts.length ? (

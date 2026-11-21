@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/legal/terms" },
 };
 
-// TODO(legal): attorney review before launch (governing law, liability language, trademark wording ™ vs ®).
 export default function TermsPage() {
   return (
     <LegalPage title="Terms of Use" updated="November 20, 2026">

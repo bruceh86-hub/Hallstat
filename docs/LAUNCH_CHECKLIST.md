@@ -1,7 +1,7 @@
 # Pre-launch checklist
 
-Placeholders marked TODO show on preview links and are **hidden automatically on the live site**
-(`src/lib/placeholders.ts`). Filling them in makes the content appear. Nothing unverified is published.
+The site shows no placeholders. Content that is not yet supplied is simply left out; this list tracks it.
+Nothing unverified is published. Attorney review of Privacy and Terms is still recommended.
 
 ## Must do before switching hallstat.com
 - [ ] **Verify the three homepage statistics** by opening each link (CDC, PMC, UNC SPICE) and confirming the number and wording. These could not be checked from the build environment.
@@ -11,7 +11,7 @@ Placeholders marked TODO show on preview links and are **hidden automatically on
 - [ ] **Cross-link the founder page** from brucehuici.com, LinkedIn (Featured + Experience), Medium bio: `https://www.hallstat.com/about/bruce-huici`.
 - [ ] Test both forms on the live domain.
 
-## Content waiting on the owner (hidden until supplied)
+## Content waiting on the owner (not shown until supplied)
 | Item | Where it appears |
 |---|---|
 | Nursing background (years, specialties, settings) | Founder page |

@@ -25,7 +25,7 @@ export const componentSections: ComponentSection[] = [
       "The MicroTip™ is less than one-third the size of a standard catheter tip. It is designed to reduce contact with the bladder wall, and the irritation that comes with it, during drainage.",
       "The tip is intended to be adaptable to a range of catheter designs without a significant increase in manufacturing cost.",
     ],
-    status: "TODO: component status (optional)",
+    status: "",
   },
   {
     slug: "callistercatheter",
@@ -35,9 +35,9 @@ export const componentSections: ComponentSection[] = [
       "Bacteria colonize a catheter by first adhering to its wall. Once attached, they can multiply into a biofilm that is difficult to remove without replacing the device.",
     design: [
       "The CallisterCatheter™ is made of 100% medical-grade silicone and is designed to resist bacterial adhesion on the catheter surface.",
-      // TODO: add a peer-reviewed citation before publishing any silicone-vs-latex adhesion comparison.
+      // Add a peer-reviewed citation before publishing any silicone-vs-latex adhesion comparison.
     ],
-    status: "TODO: component status (optional)",
+    status: "",
   },
   {
     slug: "bermeovalve",
@@ -49,7 +49,7 @@ export const componentSections: ComponentSection[] = [
       "The BermeoValve™ is a one-way valve intended to reduce urine backflow from the drainage tubing. It is designed to fit at the end of standard drainage tubing and to be compatible with catheters from various manufacturers.",
       "It uses medical-grade elastomers and minimal moving parts to simplify manufacturing.",
     ],
-    status: "TODO: component status (optional)",
+    status: "",
   },
   {
     slug: "bactistat",
@@ -61,7 +61,7 @@ export const componentSections: ComponentSection[] = [
       "BactiStat™ Tubing is a softer PVC drainage tubing with a spiral support designed to reduce kinking and keep urine flowing toward the bag.",
       "BactiStat™ Tubing is infused with BactiStat technology, designed to reduce bacterial development as urine settles in the line.",
     ],
-    status: "TODO: component status (optional)",
+    status: "",
   },
 ];
 
@@ -81,7 +81,7 @@ export const valveChallenges = [
   },
 ];
 
-/** Bacterial adhesion timeline on a standard catheter. TODO: add literature citation (BLUEPRINT 9a). */
+/** Bacterial adhesion timeline on a standard catheter. */
 export const adhesionTimeline = [
   { when: "Seconds", what: "Bacteria stick to the catheter surface (reversible)." },
   { when: "Minutes", what: "Attachment becomes irreversible." },

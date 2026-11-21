@@ -1,9 +1,8 @@
 import { Container } from "@/components/Container";
 import { trustBadges } from "@/content/home";
-import { showPlaceholders } from "@/lib/placeholders";
 
 export function TrustBar() {
-  const badges = trustBadges.filter((b) => b.verified || showPlaceholders);
+  const badges = trustBadges.filter((b) => b.verified);
   if (!badges.length) return null;
   return (
     <section aria-label="Certifications and recognition" className="border-y border-line py-10">

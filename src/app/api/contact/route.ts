@@ -7,7 +7,6 @@ import { contactSchema, contactTopics } from "@/lib/contact";
  * Env (set in Vercel): RESEND_API_KEY, CONTACT_TO_EMAIL (comma-separated allowed),
  * optional CONTACT_FROM_EMAIL to override the sender. Default sender uses contact.hallstat.com, verified in Resend
  * (Nov 2026). If that domain is ever removed from Resend, set CONTACT_FROM_EMAIL or sending will fail.
- * TODO: forward `role` to a HubSpot contact property for lead triage once HubSpot is connected.
  */
 const DEFAULT_FROM = "Hallstat Website <website@contact.hallstat.com>";
 

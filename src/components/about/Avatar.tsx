@@ -10,7 +10,7 @@ const initials = (name: string) =>
     .slice(0, 2)
     .join("");
 
-/** Headshot, or an initials placeholder until a photo is supplied (TODO). */
+/** Headshot, or initials if no photo is set. */
 export function Avatar({ name, photo, alt, className }: { name: string; photo?: string; alt?: string; className?: string }) {
   if (photo) {
     return (

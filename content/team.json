@@ -1,74 +1,74 @@
 [
   {
     "name": "Bruce Huici",
-    "credentials": "TODO",
+    "credentials": "",
     "title": "President/CEO",
     "group": "Leadership",
-    "bio": "TODO",
+    "bio": "",
     "photo": "/images/team/bruce-huici-founder-hallstat.jpg",
     "linkedin": "https://www.linkedin.com/in/bruce-huici-207b1939",
     "profile": "/about/bruce-huici"
   },
   {
     "name": "Bryan Martin",
-    "credentials": "TODO",
+    "credentials": "",
     "title": "Director/COO",
     "group": "Leadership",
-    "bio": "TODO",
+    "bio": "",
     "photo": "/images/team/bryan-martin.jpg",
     "linkedin": ""
   },
   {
     "name": "Carlos Peña",
-    "credentials": "TODO",
+    "credentials": "",
     "title": "Director/CFO",
     "group": "Leadership",
-    "bio": "TODO",
+    "bio": "",
     "photo": "/images/team/carlos-pena.jpg",
     "linkedin": ""
   },
   {
     "name": "Dr. Mileivys Huici",
-    "credentials": "TODO",
+    "credentials": "",
     "title": "Chief Clinical Officer/Executive Vice President",
     "group": "Leadership",
-    "bio": "TODO",
+    "bio": "",
     "photo": "/images/team/mileivys-huici.jpg",
     "linkedin": ""
   },
   {
     "name": "Kenneth Iroezi",
-    "credentials": "TODO",
+    "credentials": "",
     "title": "International Business Development",
     "group": "Leadership",
-    "bio": "TODO",
+    "bio": "",
     "photo": "/images/team/kenneth-iroezi.jpg",
     "linkedin": ""
   },
   {
     "name": "Dr. Mohamad El Kassim",
-    "credentials": "TODO",
+    "credentials": "",
     "title": "Medical Advisor",
     "group": "Medical Advisory Board",
-    "bio": "TODO",
+    "bio": "",
     "photo": "/images/team/mohamad-el-kassim.jpg",
     "linkedin": ""
   },
   {
     "name": "Dr. Justin Speigel",
-    "credentials": "TODO",
+    "credentials": "",
     "title": "Medical Advisor",
     "group": "Medical Advisory Board",
-    "bio": "TODO",
+    "bio": "",
     "photo": "/images/team/justin-speigel.jpg",
     "linkedin": ""
   },
   {
     "name": "Dr. Nora Homsi",
-    "credentials": "TODO",
+    "credentials": "",
     "title": "Medical Advisor",
     "group": "Medical Advisory Board",
-    "bio": "TODO",
+    "bio": "",
     "photo": "/images/team/nora-homsi.jpg",
     "linkedin": ""
   }

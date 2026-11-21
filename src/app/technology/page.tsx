@@ -11,7 +11,6 @@ import { Figure } from "@/components/technology/Figure";
 import { AdhesionTimeline } from "@/components/technology/AdhesionTimeline";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationId } from "@/content/founder";
-import { showPlaceholders } from "@/lib/placeholders";
 import { ValveFlowDiagram } from "@/components/technology/ValveFlowDiagram";
 import systemImg from "../../../public/images/product/hallstat-system.jpg";
 import microtipImg from "../../../public/images/product/microtip-vs-standard.jpg";
@@ -127,10 +126,8 @@ export default function TechnologyPage() {
               </figcaption>
             </figure>
           </div>
-          {/* TODO(owner): method, date, test conditions and sample size for this observation (BLUEPRINT 9a). */}
           <p className="mt-6 text-sm text-muted">
-            {showPlaceholders && "Method, date, conditions and sample size: TODO. "}Results from a single internal
-            observation may not reflect clinical performance.
+            Results from a single internal observation may not reflect clinical performance.
           </p>
         </div>
       </ComponentBlock>
@@ -174,11 +171,6 @@ export default function TechnologyPage() {
             </p>
             <p>Drainage components are 510(k)-exempt Class II devices under 21 CFR 876.5250.</p>
           </div>
-          {showPlaceholders && (
-            <p className="mt-6 rounded-md border border-dashed border-amber-500 p-4 text-sm text-muted">
-              TODO: component status and patent pending / patent numbers (shown only on previews).
-            </p>
-          )}
         </Container>
       </section>
 

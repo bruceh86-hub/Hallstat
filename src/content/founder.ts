@@ -1,6 +1,6 @@
 import { site } from "@/config/site";
 
-/** Founder page data — docs/BLUEPRINT.md section 11. Only verified facts; gaps are TODO. */
+/** Founder page data — docs/BLUEPRINT.md section 11. Only verified facts. */
 export const founder = {
   name: "Bruce Huici",
   jobTitle: "Founder & CEO",
@@ -23,11 +23,6 @@ export const founder = {
       label: "Member, Free At Last Coalition (501(c)(3) nonprofit)",
       href: "https://www.freeatlastcoalition.org/team/bruce-huici/",
       verified: true,
-    },
-    {
-      label: "Top 100 Healthcare Leader, 2019 — TODO: confirm awarding organization and add proof before publishing",
-      href: "",
-      verified: false,
     },
   ],
 } as const;

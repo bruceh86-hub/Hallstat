@@ -10,7 +10,7 @@ Next.js 15 (App Router) · TypeScript · Tailwind CSS · shadcn/ui · Framer Mot
 2. Never mention a securement device or any coating technology.
 3. Use accurate, evidence-calibrated language ("designed to," "intended to reduce"). Never claim proven clinical outcomes, and never call the device investigational.
 4. Every statistic shows a visible citation link to its source (sources listed in BLUEPRINT section 3b).
-5. Do not invent studies, certifications, patent numbers, team bios, or logos. Use clearly marked placeholders (`TODO:`) instead.
+5. Do not invent studies, certifications, patent numbers, team bios, or logos. Leave missing content out (no visible placeholders) and track it in `docs/LAUNCH_CHECKLIST.md`.
 6. Founder name SEO is a core goal — implement BLUEPRINT section 11 exactly (founder page, Person/ProfilePage JSON-LD with sameAs, Organization.founder, newsroom with author bylines). No keyword stuffing, hidden text, or doorway pages.
 7. Footer includes `site.disclaimer` and the current year.
 

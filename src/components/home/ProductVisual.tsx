@@ -4,7 +4,6 @@ import systemPhoto from "../../../public/images/product/hallstat-system.jpg";
 
 /**
  * Full Hallstat system photo (cropped from the current product page).
- * TODO: swap in the high-resolution original / licensed render when available.
  */
 export function ProductVisual({ className, priority = false }: { className?: string; priority?: boolean }) {
   return (
