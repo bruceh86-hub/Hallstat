@@ -106,6 +106,28 @@ export default function FounderPage() {
             “Designed by nurses. Built for nurses.”
             <footer className="mt-2 text-sm font-normal text-muted">— Bruce Huici</footer>
           </blockquote>
+
+          <h2 className="pt-4 text-2xl font-bold tracking-tight text-navy">Other ventures</h2>
+          {founder.otherVentures.map((v) => (
+            <p key={v.name}>
+              Bruce is also the founder of{" "}
+              <a href={v.href} className="font-semibold text-navy-600 hover:underline">
+                {v.name}
+              </a>
+              , {v.summary}. Read his{" "}
+              <a href={v.profile} className="font-semibold text-navy-600 hover:underline">
+                founder profile at {v.name}
+              </a>
+              .
+            </p>
+          ))}
+          <p>
+            His full biography, patents and articles are on his personal website,{" "}
+            <a href={founder.personalSite.href} className="font-semibold text-navy-600 hover:underline">
+              {founder.personalSite.label}
+            </a>
+            .
+          </p>
         </article>
 
         <aside className="space-y-10">

@@ -37,7 +37,13 @@ const organizationLd = {
   url: site.url,
   logo: `${site.url}/brand/hallstat-logo-navy.png`,
   description: site.description,
-  founder: { "@type": "Person", "@id": personId, name: site.founder.name, url: `${site.url}${site.founder.path}` },
+  founder: {
+    "@type": "Person",
+    "@id": personId,
+    name: site.founder.name,
+    url: `${site.url}${site.founder.path}`,
+    sameAs: ["https://www.brucehuici.com"],
+  },
   email: "info@hallstat.com",
 };
 
