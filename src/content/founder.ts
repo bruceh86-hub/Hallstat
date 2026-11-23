@@ -13,11 +13,23 @@ export const founder = {
   knowsAbout: ["Foley catheters", "CAUTI prevention", "medical device design", "nursing"],
   links: [
     { label: "brucehuici.com", href: "https://www.brucehuici.com" },
+    { label: "Founder profile at Nurvana", href: "https://www.nurvanarx.com/about/bruce-huici" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/bruce-huici-207b1939" },
     { label: "Medium", href: "https://medium.com/@BruceHuici" },
     { label: "Crunchbase", href: "https://www.crunchbase.com/person/bruce-huici-383a" },
     { label: "Facebook", href: "https://www.facebook.com/BruceHuici" },
   ],
+  /** Bruce's other company (a separate venture; never part of the Hallstat system). */
+  otherVentures: [
+    {
+      name: "Nurvana",
+      href: "https://www.nurvanarx.com",
+      profile: "https://www.nurvanarx.com/about/bruce-huici",
+      summary: "an early-stage research venture studying an investigational candidate for ischemic-stroke recovery",
+    },
+  ],
+  /** Full biography, patents and articles. */
+  personalSite: { label: "brucehuici.com", href: "https://www.brucehuici.com/about" },
   affiliations: [
     {
       label: "Member, Free At Last Coalition (501(c)(3) nonprofit)",
