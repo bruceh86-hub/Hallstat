@@ -28,8 +28,20 @@ export const founder = {
       summary: "an early-stage research venture studying an investigational candidate for ischemic-stroke recovery",
     },
   ],
-  /** Full biography, patents and articles. */
-  personalSite: { label: "brucehuici.com", href: "https://www.brucehuici.com/about" },
+  /** Bruce's personal site: the central record of his biography, patents and articles. */
+  personalSite: {
+    home: "https://www.brucehuici.com/",
+    biography: "https://www.brucehuici.com/about",
+    venture: "https://www.brucehuici.com/ventures/hallstat",
+    insights: "https://www.brucehuici.com/insights",
+  },
+  /** Official records of the two Hallstat-related U.S. patents (verified on Google Patents). */
+  patents: [
+    { number: "U.S. Patent 11,938,276", href: "https://patents.google.com/patent/US11938276B2/en" },
+    { number: "U.S. Patent 10,179,232", href: "https://patents.google.com/patent/US10179232B2/en" },
+  ],
+  /** Third-party interview (subjectOf, not sameAs). */
+  interview: { label: "IdeaMensch", href: "https://ideamensch.com/bruce-huici/" },
   affiliations: [
     {
       label: "Member, Free At Last Coalition (501(c)(3) nonprofit)",
@@ -39,5 +51,11 @@ export const founder = {
   ],
 } as const;
 
-export const personId = `${site.url}${founder.path}#person`;
+/**
+ * One Person entity across hallstat.com, nurvanarx.com and brucehuici.com:
+ * the @id is the one brucehuici.com (Bruce's central professional site)
+ * publishes. Owner request 2026-11-26; supersedes BLUEPRINT 11b's
+ * hallstat.com-local @id.
+ */
+export const personId = "https://www.brucehuici.com/#person";
 export const organizationId = `${site.url}/#organization`;

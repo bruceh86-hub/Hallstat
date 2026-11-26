@@ -15,8 +15,15 @@ export type Post = {
   /** Link to the originally distributed release (e.g. a wire service). */
   source?: string;
   sourceName?: string;
+  /** Further verified copies of the release on distribution services. */
+  alsoPublished: { name: string; url: string }[];
+  /** Related pages shown under the release (founder, technology, articles). */
+  related: { label: string; url: string; note?: string }[];
   content: string;
 };
+
+const list = <T,>(v: unknown, pick: (o: Record<string, unknown>) => T | null): T[] =>
+  Array.isArray(v) ? v.map((o) => (o && typeof o === "object" ? pick(o as Record<string, unknown>) : null)).filter((x): x is T => x !== null) : [];
 
 export function getPosts(): Post[] {
   if (!fs.existsSync(DIR)) return [];
@@ -36,6 +43,12 @@ export function getPosts(): Post[] {
         image: data.image ? String(data.image) : undefined,
         source: data.source ? String(data.source) : undefined,
         sourceName: data.sourceName ? String(data.sourceName) : undefined,
+        alsoPublished: list(data.alsoPublished, (o) =>
+          o.name && o.url ? { name: String(o.name), url: String(o.url) } : null,
+        ),
+        related: list(data.related, (o) =>
+          o.label && o.url ? { label: String(o.label), url: String(o.url), ...(o.note ? { note: String(o.note) } : {}) } : null,
+        ),
         content,
       };
     })

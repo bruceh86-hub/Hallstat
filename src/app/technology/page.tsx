@@ -171,6 +171,13 @@ export default function TechnologyPage() {
             </p>
             <p>Drainage components are 510(k)-exempt Class II devices under 21 CFR 876.5250.</p>
           </div>
+          <p className="mt-6 max-w-3xl text-muted">
+            Hallstat is evaluating manufacturers in the United States and nearby countries; read{" "}
+            <Link href="/news/manufacturing-closer-to-home" className="font-semibold text-navy-600 hover:underline">
+              Hallstat&rsquo;s plan to manufacture closer to home
+            </Link>
+            .
+          </p>
         </Container>
       </section>
 
