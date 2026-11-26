@@ -41,8 +41,8 @@ const organizationLd = {
     "@type": "Person",
     "@id": personId,
     name: site.founder.name,
-    url: `${site.url}${site.founder.path}`,
-    sameAs: ["https://www.brucehuici.com"],
+    url: "https://www.brucehuici.com/",
+    sameAs: [`${site.url}${site.founder.path}`, "https://www.nurvanarx.com/about/bruce-huici"],
   },
   email: "info@hallstat.com",
 };

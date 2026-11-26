@@ -11,7 +11,15 @@ export const metadata: Metadata = {
   title: { absolute: "Bruce Huici — Founder & CEO, Hallstat Industries" },
   description: founder.description,
   alternates: { canonical: founder.path },
-  openGraph: { type: "profile", title: "Bruce Huici — Founder & CEO, Hallstat Industries", url: founder.path },
+  openGraph: {
+    type: "profile",
+    title: "Bruce Huici — Founder & CEO, Hallstat Industries",
+    description: founder.description,
+    url: founder.path,
+    siteName: site.name,
+    locale: "en_US",
+    ...(founder.photo ? { images: [{ url: founder.photo, alt: founder.photoAlt }] } : {}),
+  },
 };
 
 const pageUrl = `${site.url}${founder.path}`;
@@ -27,13 +35,18 @@ const jsonLd = {
     "@id": personId,
     name: founder.name,
     jobTitle: founder.jobTitle,
-    url: pageUrl,
+    // Canonical home of the shared Person entity (see personId).
+    url: founder.personalSite.home,
+    mainEntityOfPage: pageUrl,
     description: founder.description,
     ...(founder.photo ? { image: `${site.url}${founder.photo}` } : {}),
     worksFor: { "@type": "Organization", "@id": organizationId, name: site.legalName, url: site.url },
     knowsAbout: founder.knowsAbout,
     memberOf: { "@type": "Organization", name: "Free At Last Coalition", url: "https://www.freeatlastcoalition.org" },
-    subjectOf: [{ "@type": "WebPage", url: "https://www.freeatlastcoalition.org/team/bruce-huici/" }],
+    subjectOf: [
+      { "@type": "WebPage", url: "https://www.freeatlastcoalition.org/team/bruce-huici/" },
+      { "@type": "WebPage", name: "Bruce Huici — IdeaMensch interview", url: founder.interview.href },
+    ],
     sameAs: founder.links.map((l) => l.href),
   },
 };
@@ -121,10 +134,34 @@ export default function FounderPage() {
               .
             </p>
           ))}
+          <h2 className="pt-4 text-2xl font-bold tracking-tight text-navy">Background and publications</h2>
           <p>
-            His full biography, patents and articles are on his personal website,{" "}
-            <a href={founder.personalSite.href} className="font-semibold text-navy-600 hover:underline">
-              {founder.personalSite.label}
+            Read 
+            <a href={founder.personalSite.biography} className="font-semibold text-navy-600 hover:underline">
+              Bruce Huici&rsquo;s professional biography
+            </a> 
+            on his personal website, which also tells the story of 
+            <a href={founder.personalSite.venture} className="font-semibold text-navy-600 hover:underline">
+              Bruce Huici, founder of Hallstat
+            </a>
+            . His medical device development experience is on the public record in 
+            {founder.patents.map((p, i) => (
+              <span key={p.href}>
+                {i > 0 && " and "}
+                <a href={p.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-navy-600 hover:underline">
+                  {p.number}
+                  <span className="sr-only"> (official record, opens in a new tab)</span>
+                </a>
+              </span>
+            ))}
+            . He writes about device development and manufacturing in his 
+            <a href={founder.personalSite.insights} className="font-semibold text-navy-600 hover:underline">
+              professional publications and insights
+            </a>
+            , and spoke about building Hallstat in an 
+            <a href={founder.interview.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-navy-600 hover:underline">
+              interview with {founder.interview.label}
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
             .
           </p>

@@ -52,7 +52,11 @@ export default function AboutPage() {
               <Link href="/studies" className="font-semibold text-navy-600 hover:underline">
                 published research
               </Link>{" "}
-              and clearly separated from our own early bench work.
+              and clearly separated from our own early bench work. In October 2026 we announced{" "}
+              <Link href="/news/manufacturing-closer-to-home" className="font-semibold text-navy-600 hover:underline">
+                plans to manufacture closer to home
+              </Link>
+              .
             </p>
           </div>
         </Container>
